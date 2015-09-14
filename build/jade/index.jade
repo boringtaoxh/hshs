@@ -4,7 +4,7 @@ head
     title 绘事后素
     link(rel='stylesheet', href='assets/css/styles.css')
   body(ng-app='hshs')
-    .container(ng-controller='indexCtrl')
+    .container(ng-controller='indexCtrl' ng-cloak)
       h1 {{site.name}}
       p {{site.desc}}
     script(src='assets/js/vendor.js')
