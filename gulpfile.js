@@ -16,9 +16,9 @@ var gulp        = require('gulp'),
 
 /* build */
 var build = {
-	htmls: ['build/jade/*.jade'],
-  styles: ['build/stylus/*.styl'],
-  scripts: ['build/coffee/*.coffee']
+	htmls: ['build/jade/**/*.jade'],
+  styles: ['build/stylus/**/*.styl'],
+  scripts: ['build/coffee/**/*.coffee']
 }
 
 gulp.task('htmls', function() {
@@ -48,7 +48,7 @@ gulp.task('scripts', function() {
   return gulp.src(build.scripts)
     .pipe(coffee({bare: true}))
     .pipe(concat('scripts.js'))
-    .pipe(minifyjs())
+    /*.pipe(minifyjs())*/
     .pipe(gulp.dest('assets/js/'));
 });
 
