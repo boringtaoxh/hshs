@@ -9,6 +9,7 @@ var gulp        = require('gulp'),
     /* js */
     coffee = require('gulp-coffee'),
     vendor = require('gulp-concat-vendor'),
+    ngAnnotate = require('gulp-ng-annotate'),
     minifyjs    = require('gulp-uglify'),
     /* server */
     livereload  = require('gulp-livereload'),
@@ -48,7 +49,8 @@ gulp.task('scripts', function() {
   return gulp.src(build.scripts)
     .pipe(coffee({bare: true}))
     .pipe(concat('scripts.js'))
-    /*.pipe(minifyjs())*/
+    .pipe(ngAnnotate({single_quotes: true}))
+    .pipe(minifyjs())
     .pipe(gulp.dest('assets/js/'));
 });
 
