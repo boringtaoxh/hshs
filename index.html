@@ -2,14 +2,14 @@
 <head>
   <meta charset="UTF-8"/>
   <title>绘事后素</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="assets/css/styles.css"/>
-</head>
-<body ng-app="hshs">
-  <div ng-controller="indexCtrl" ng-cloak="ng-cloak" class="container">
-    <h1>{{site.name}}</h1>
-    <p>{{site.desc}}</p>
-  </div>
   <script src="assets/js/vendor.js"></script>
+</head>
+<body ng-app="hshs" ng-controller="indexCtrl" ng-cloak="ng-cloak">
+  <h1>{{site.name}}</h1>
+  <p>{{site.desc}}</p>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="assets/js/scripts.js"></script>
   <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
