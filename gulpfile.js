@@ -50,7 +50,7 @@ gulp.task('scripts', function() {
     .pipe(coffee({bare: true}))
     .pipe(concat('scripts.js'))
     .pipe(ngAnnotate({single_quotes: true}))
-    .pipe(minifyjs())
+    /*.pipe(minifyjs())*/
     .pipe(gulp.dest('assets/js/'));
 });
 

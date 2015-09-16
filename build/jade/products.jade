@@ -1,0 +1,37 @@
+html(ng-app='hshs')
+  head
+    meta(charset='UTF-8')
+    meta(name="viewport" content="width=1170")
+    title 绘事后素
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
+    link(rel='stylesheet', href='assets/css/styles.css')
+    script(src='assets/js/vendor.js')
+  body(ng-cloak)
+    .container
+      header
+        include partials/nav-top
+      #main(ng-controller='productsCtrl')
+        aside#filters.col-xs-2
+          setion#designers 
+            h4.filter 设计师
+            ul.row
+              li.col-xs-12(ng-repeat='designer in designers') {{designer}}
+          setion#category
+            h4.filter 服装
+            ul.row
+              li.col-xs-6(ng-repeat='category in categories') {{category}}
+          setion#price 
+            h4.filter 价格
+            ul.row
+              li.col-xs-12(ng-repeat='price in prices') {{price}}
+        article#products.col-xs-10
+          ul.row
+            li.col-xs-3(ng-repeat='product in products')
+              img.img-responsive(data-src='holder.js/210x280')
+              .designer {{product.designer}}
+              .name Product-{{product.id}}
+              .price ￥{{product.price}}
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+    script(src='assets/js/scripts.js')
+    script.
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')

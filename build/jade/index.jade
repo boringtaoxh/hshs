@@ -1,13 +1,17 @@
-doctype html(lang='en')
+html(ng-app='hshs')
   head
     meta(charset='UTF-8')
+    meta(name="viewport" content="width=1170")
     title 绘事后素
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
     link(rel='stylesheet', href='assets/css/styles.css')
     script(src='assets/js/vendor.js')
-  body(ng-app='hshs' ng-controller='indexCtrl' ng-cloak)
-    h1 {{site.name}}
-    p {{site.desc}}
+  body(ng-cloak)
+    .container
+      header
+        include partials/nav-top
+      #main(ng-controller='indexCtrl')
+        h1 {{site.name}}
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
     script(src='assets/js/scripts.js')
     script.

@@ -1,0 +1,55 @@
+nav.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href='#') 绘事后素
+    #navbar-collapse.collapse.navbar-collapse
+      ul.nav.navbar-nav       
+        li.dropdown
+          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+            | 新品速递 
+            span.caret
+          ul.dropdown-menu
+            li
+              a(href='#') For him
+            li
+              a(href='#') For her
+        li.dropdown
+          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+            | 女装 
+            span.caret
+          ul.dropdown-menu
+            li
+              a(href='#') 设计师
+            li
+              a(href='#') 服装
+            li
+              a(href='#') 配饰
+        li.dropdown
+          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+            | 男装 
+            span.caret
+          ul.dropdown-menu
+            li
+              a(href='#') 设计师
+            li
+              a(href='#') 服装
+            li
+              a(href='#') 配饰
+        li.dropdown
+          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+            | 折扣 
+            span.caret
+          ul.dropdown-menu
+            li
+              a(href='#') 男装
+            li
+              a(href='#') 女装
+      form.navbar-form.navbar-right(role='search')
+        .form-group
+          input.form-control(type='text', placeholder='Search')
+        button.btn.btn-default(type='submit') Go
