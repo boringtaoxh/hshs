@@ -1,0 +1,37 @@
+
+<div id="main" ng-controller="productsCtrl">
+  <div id="products" class="row">
+    <aside id="filters" class="col-xs-2">
+      <setion id="designers">
+        <h4 class="filter">设计师</h4>
+        <ul class="row">
+          <li ng-repeat="designer in designers" class="col-xs-12"><a href="#">{{designer}}</a></li>
+        </ul>
+      </setion>
+      <setion id="category">
+        <h4 class="filter">服装</h4>
+        <ul class="row">
+          <li ng-repeat="category in categories" class="col-xs-6"><a href="#">{{category}}</a></li>
+        </ul>
+      </setion>
+      <setion id="price">
+        <h4 class="filter">价格</h4>
+        <ul class="row">
+          <li ng-repeat="price in prices" class="col-xs-12"><a href="#">{{price}}</a></li>
+        </ul>
+      </setion>
+    </aside>
+    <article id="products" class="col-xs-10">
+      <ul class="row">
+        <li ng-repeat="product in products" class="col-xs-3"><img data-src="holder.js/210x280" class="img-responsive"/>
+          <div class="designer">{{product.designer}}</div>
+          <div class="name">Product-{{product.id}}</div>
+          <div class="price">￥{{product.price}}</div>
+        </li>
+      </ul>
+      <div class="text-right">
+        <pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" boundary-links="true" class="pagination-sm"></pagination>
+      </div>
+    </article>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+
+<div id="main" ng-controller="productCtrl">
+  <div id="product" class="row">
+    <div id="images" class="col-xs-5 row">
+      <div id="thumbs" class="col-xs-3">
+        <ul>
+          <li class="col-xs-12"><img data-src="holder.js/60x80" class="img-responsive"/></li>
+          <li class="col-xs-12"><img data-src="holder.js/60x80" class="img-responsive"/></li>
+          <li class="col-xs-12"><img data-src="holder.js/60x80" class="img-responsive"/></li>
+          <li class="col-xs-12"><img data-src="holder.js/60x80" class="img-responsive"/></li>
+          <li class="col-xs-12"><img data-src="holder.js/60x80" class="img-responsive"/></li>
+        </ul>
+      </div>
+      <div id="image" class="col-xs-9"><img data-src="holder.js/300x400"/></div>
+    </div>
+    <div id="details" class="col-xs-7">
+      <h2>Valentino</h2>
+      <h3>蕾丝上衣拼接连衣裙</h3>
+      <h3>￥2,900</h3>
+      <accordion> 
+        <accordion-group is-open="status.detail">
+          <accordion-heading>商品详情<i ng-class="{'glyphicon-chevron-down': status.detail, 'glyphicon-chevron-right': !status.detail}" class="pull-right glyphicon"></i></accordion-heading>This is just some content to illustrate fancy headings.
+        </accordion-group>
+        <accordion-group is-open="status.size">
+          <accordion-heading>尺寸指导<i ng-class="{'glyphicon-chevron-down': status.size, 'glyphicon-chevron-right': !status.size}" class="pull-right glyphicon"></i></accordion-heading>This is just some content to illustrate fancy headings.
+        </accordion-group>
+        <accordion-group is-open="status.shipping">
+          <accordion-heading>寄送信息<i ng-class="{'glyphicon-chevron-down': status.shipping, 'glyphicon-chevron-right': !status.shipping}" class="pull-right glyphicon"></i></accordion-heading>This is just some content to illustrate fancy headings.
+        </accordion-group>
+      </accordion>
+    </div>
+  </div>
+</div>
