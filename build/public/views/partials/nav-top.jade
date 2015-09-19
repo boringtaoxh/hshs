@@ -6,7 +6,7 @@ nav.navbar.navbar-default
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand(href='#') 绘事后素
+      a.navbar-brand(href='/') 绘事后素
     #navbar-collapse.collapse.navbar-collapse
       ul.nav.navbar-nav       
         li.dropdown
@@ -15,40 +15,40 @@ nav.navbar.navbar-default
             span.caret
           ul.dropdown-menu
             li
-              a(href='#') For him
+              a(href='/products') For him
             li
-              a(href='#') For her
+              a(href='/products') For her
         li.dropdown
           a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
             | 女装 
             span.caret
           ul.dropdown-menu
             li
-              a(href='#') 设计师
+              a(href='/products') 设计师
             li
-              a(href='#') 服装
+              a(href='/products') 服装
             li
-              a(href='#') 配饰
+              a(href='/products') 配饰
         li.dropdown
           a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
             | 男装 
             span.caret
           ul.dropdown-menu
             li
-              a(href='#') 设计师
+              a(href='/products') 设计师
             li
-              a(href='#') 服装
+              a(href='/products') 服装
             li
-              a(href='#') 配饰
+              a(href='/products') 配饰
         li.dropdown
           a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
             | 折扣 
             span.caret
           ul.dropdown-menu
             li
-              a(href='#') 男装
+              a(href='/products') 男装
             li
-              a(href='#') 女装
+              a(href='/products') 女装
       form.navbar-form.navbar-right(role='search' ng-controller='productsCtrl')
         .form-group
           input.form-control(type='text' placeholder='Search' ng-model='product.designer' typeahead='product.designer for product in products | filter: $viewValue | limitTo: 8')
