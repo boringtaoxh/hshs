@@ -1,3 +1,3 @@
 'use strict'
 
-hshs = angular.module 'hshs', []
+hshs = angular.module 'hshs', ['ui.bootstrap']

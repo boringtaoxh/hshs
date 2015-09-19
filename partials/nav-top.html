@@ -33,9 +33,9 @@
           </ul>
         </li>
       </ul>
-      <form role="search" class="navbar-form navbar-right">
+      <form role="search" ng-controller="productsCtrl" class="navbar-form navbar-right">
         <div class="form-group">
-          <input type="text" placeholder="Search" class="form-control"/>
+          <input type="text" placeholder="Search" ng-model="product.designer" typeahead="product.designer for product in products | filter: $viewValue | limitTo: 8" class="form-control"/>
         </div>
         <button type="submit" class="btn btn-default">Go</button>
       </form>

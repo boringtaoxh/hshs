@@ -10,7 +10,7 @@ hshs.controller 'productsCtrl', ($scope) ->
   prices = ['￥1000以下', '￥1000-￥2000', '￥2000-￥5000', '￥5000-￥10000','￥10000以上']
   products = new Array()
   i = 0
-  while i < 28
+  while i < 16
     product = { 
       id : i
       designer: designers[i%8]
@@ -25,3 +25,13 @@ hshs.controller 'productsCtrl', ($scope) ->
   $scope.prices = prices
   $scope.products = products
   console.log $scope.designers
+
+  $scope.maxSize = 5;
+  $scope.bigTotalItems = 175;
+  $scope.bigCurrentPage = 1;
+
+hshs.controller 'productCtrl', ($scope) ->
+  $scope.status = 
+    detail: true
+    size: false
+    shipping: false

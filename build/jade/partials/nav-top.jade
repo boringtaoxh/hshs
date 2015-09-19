@@ -49,7 +49,7 @@ nav.navbar.navbar-default
               a(href='#') 男装
             li
               a(href='#') 女装
-      form.navbar-form.navbar-right(role='search')
+      form.navbar-form.navbar-right(role='search' ng-controller='productsCtrl')
         .form-group
-          input.form-control(type='text', placeholder='Search')
+          input.form-control(type='text' placeholder='Search' ng-model='product.designer' typeahead='product.designer for product in products | filter: $viewValue | limitTo: 8')
         button.btn.btn-default(type='submit') Go

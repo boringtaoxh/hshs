@@ -1,7 +1,7 @@
 'use strict';
 var hshs;
 
-hshs = angular.module('hshs', []);
+hshs = angular.module('hshs', ['ui.bootstrap']);
 
 hshs.controller('indexCtrl', ['$scope', function($scope) {
   return $scope.site = {
@@ -17,7 +17,7 @@ hshs.controller('productsCtrl', ['$scope', function($scope) {
   prices = ['￥1000以下', '￥1000-￥2000', '￥2000-￥5000', '￥5000-￥10000', '￥10000以上'];
   products = new Array();
   i = 0;
-  while (i < 28) {
+  while (i < 16) {
     product = {
       id: i,
       designer: designers[i % 8],
@@ -31,5 +31,16 @@ hshs.controller('productsCtrl', ['$scope', function($scope) {
   $scope.categories = categories;
   $scope.prices = prices;
   $scope.products = products;
-  return console.log($scope.designers);
+  console.log($scope.designers);
+  $scope.maxSize = 5;
+  $scope.bigTotalItems = 175;
+  return $scope.bigCurrentPage = 1;
+}]);
+
+hshs.controller('productCtrl', ['$scope', function($scope) {
+  return $scope.status = {
+    detail: true,
+    size: false,
+    shipping: false
+  };
 }]);

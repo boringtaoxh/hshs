@@ -3,7 +3,7 @@ html(ng-app='hshs')
     meta(charset='UTF-8')
     meta(name="viewport" content="width=1170")
     title 绘事后素
-    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
+    link(rel="stylesheet" href="assets/css/bootstrap.css")
     link(rel='stylesheet', href='assets/css/styles.css')
     script(src='assets/js/vendor.js')
   body(ng-cloak)
@@ -12,7 +12,7 @@ html(ng-app='hshs')
         include partials/nav-top
       #main(ng-controller='indexCtrl')
         h1 {{site.name}}
-    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
     script(src='assets/js/scripts.js')
     script.
       document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
