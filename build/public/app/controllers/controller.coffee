@@ -1,3 +1,5 @@
+'use strict'
+
 hshs.controller 'indexCtrl', ($scope) ->
     $scope.site = 
       name: '绘事后素'
@@ -24,7 +26,6 @@ hshs.controller 'productsCtrl', ($scope) ->
   $scope.categories = categories
   $scope.prices = prices
   $scope.products = products
-  console.log $scope.designers
 
   $scope.maxSize = 5;
   $scope.bigTotalItems = 175;

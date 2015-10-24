@@ -1,7 +1,7 @@
 {
-  "name": "MEAN",
+  "name": "HSHS",
   "version": "0.1.0",
-  "description": "Gulp MEAN TDD",
+  "description": "HSHS Fashion",
   "author": "boringtao <taoxh@hotmail.com>",
   "scripts": {
     "start": "node server.js"

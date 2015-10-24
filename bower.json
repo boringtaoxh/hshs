@@ -12,6 +12,7 @@
     "angular-bootstrap": "~0.13.4",
     "angular-ui-utils": "~0.1.1",
     "angular-ui-router": "~0.2.15",
-    "holderjs": "~2.8.2"
+    "holderjs": "~2.8.2",
+    "angular-ui-grid": "~3.0.6"
   }
 }

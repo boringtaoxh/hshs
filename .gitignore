@@ -33,8 +33,4 @@ node_modules
 
 
 ### Bower ###
-vendor
-
-### Gulp ###
-public/assets/css
-public/assets/js
+public/vendor
