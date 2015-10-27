@@ -27,9 +27,10 @@ hshs.controller('indexCtrl', function($scope) {
 });
 
 hshs.controller('productsCtrl', function($scope) {
-  var categories, designers, i, prices, product, products;
+  var categories, designers, i, prices, product, products,colors;
   designers = ['Alexander McQueen', 'Acne Studios', 'Cedric Jacquemyn', 'Christian Louboutin', 'Christopher Kane', 'Ann Demeulemeester', 'Alexander Wang', 'Chi Zhang'];
   categories = ['裙子', '大衣', '针织衫', '夹克', '内衣', '裤子', '衬衣', '西服', 'T恤', '泳装', '其它'];
+  colors = [{value: "#333333", name: "Black",quantity:"233"},{value: "#1664c4", name: "Blue",quantity:"13"},{value: "#c00707", name: "Red",quantity:"83"},{value: "#6fcc14", name: "Green",quantity:"8"},{value: "#943f00", name: "Brown",quantity:"53"}];
   prices = ['￥1000以下', '￥1000-￥2000', '￥2000-￥5000', '￥5000-￥10000', '￥10000以上'];
   products = new Array();
   i = 0;
@@ -45,6 +46,7 @@ hshs.controller('productsCtrl', function($scope) {
   }
   $scope.designers = designers;
   $scope.categories = categories;
+  $scope.colors = colors;
   $scope.prices = prices;
   $scope.products = products;
   $scope.maxSize = 5;

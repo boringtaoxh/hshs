@@ -1,55 +1,659 @@
-nav.navbar.navbar-default
-  .container-fluid
+nav.navbar.navbar-tshop.navbar-fixed-top.megamenu(role='navigation')
+  .navbar-top
+    .container
+      .row
+        .col-lg-6.col-sm-6.col-xs-6.col-md-6
+          .pull-left
+            ul.userMenu
+              li
+                a(href='#')
+                  span.hidden-xs 电话
+                  i.glyphicon.glyphicon-info-sign.hide.visible-xs
+              li.phone-number
+                a(href='callto:+88016000000')
+                  span
+                    i(style="margin-top:6px;margin-right:5px").glyphicon.glyphicon-phone-alt
+                  span.hidden-xs 88 01680 53 1352
+        .col-lg-6.col-sm-6.col-xs-6.col-md-6.no-margin.no-padding
+          .pull-right
+            ul.userMenu
+              li
+                a(href='account-1.html')
+                  span.hidden-xs  我的账户
+                  i.glyphicon.glyphicon-user.hide.visible-xs
+              li
+                a.pop-up(href='#register-form', data-toggle='modal', data-target='#ModalLogin')
+                  span.hidden-xs 注册
+                  i.glyphicon.glyphicon-log-in.hide.visible-xs
+              li.hidden-xs
+                a.pop-up(href='#login-form', data-toggle='modal', data-target='#ModalSignup') 登录
+  // /.navbar-top
+  .container
     .navbar-header
-      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
-        span.sr-only Toggle navigation
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+        span.sr-only  Toggle navigation
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand(href='/') 绘事后素
-    #navbar-collapse.collapse.navbar-collapse
-      ul.nav.navbar-nav       
-        li.dropdown
-          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-            | 新品速递 
-            span.caret
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-cart')
+        i.fa.fa-shopping-cart.colorWhite
+        span.cartRespons.colorWhite  购物车 (￥210.00)
+      a.navbar-brand(href='index.html')
+        img(src='images/u28.png', alt='绘事后素')
+      // this part for mobile
+      .search-box.pull-right.hidden-lg.hidden-md.hidden-sm
+        .input-group
+          button.btn.btn-nobg.getFullSearch(type='button')
+            i.fa.fa-search
+        // /input-group
+    // this part is duplicate from cartMenu  keep it for mobile
+    .navbar-cart.collapse
+      .cartMenu.col-lg-4.col-xs-12.col-md-4
+        .w100.miniCartTable.scroll-pane
+          table
+            tbody
+              tr.miniCartProduct
+                td.miniCartProductThumb(style='20%')
+                  div
+                    a(href='product-details.html')
+                      img(src='images/product/3.jpg', alt='img')
+                td(style='40%')
+                  .miniCartDescription
+                    h4
+                      a(href='product-details.html')  TSHOP T shirt Black
+                    span.size  12 x 1.5 L
+                    .price
+                      span  $8.80
+                td.miniCartQuantity(style='10%')
+                  a  X 1
+                td.miniCartSubtotal(style='15%')
+                  span  $8.80
+                td.delete(style='5%')
+                  a  x
+              tr.miniCartProduct
+                td.miniCartProductThumb(style='20%')
+                  div
+                    a(href='product-details.html')
+                      img(src='images/product/2.jpg', alt='img')
+                td(style='40%')
+                  .miniCartDescription
+                    h4
+                      a(href='product-details.html')  TSHOP T shirt Black
+                    span.size  12 x 1.5 L
+                    .price
+                      span  $8.80
+                td.miniCartQuantity(style='10%')
+                  a  X 1
+                td.miniCartSubtotal(style='15%')
+                  span  $8.80
+                td.delete(style='5%')
+                  a  x
+              tr.miniCartProduct
+                td.miniCartProductThumb(style='20%')
+                  div
+                    a(href='product-details.html')
+                      img(src='images/product/5.jpg', alt='img')
+                td(style='40%')
+                  .miniCartDescription
+                    h4
+                      a(href='product-details.html')  TSHOP T shirt Black
+                    span.size  12 x 1.5 L
+                    .price
+                      span  $8.80
+                td.miniCartQuantity(style='10%')
+                  a  X 1
+                td.miniCartSubtotal(style='15%')
+                  span  $8.80
+                td.delete(style='5%')
+                  a  x
+              tr.miniCartProduct
+                td.miniCartProductThumb(style='20%')
+                  div
+                    a(href='product-details.html')
+                      img(src='images/product/3.jpg', alt='img')
+                td(style='40%')
+                  .miniCartDescription
+                    h4
+                      a(href='product-details.html')  TSHOP T shirt Black
+                    span.size  12 x 1.5 L
+                    .price
+                      span  $8.80
+                td.miniCartQuantity(style='10%')
+                  a  X 1
+                td.miniCartSubtotal(style='15%')
+                  span  $8.80
+                td.delete(style='5%')
+                  a  x
+              tr.miniCartProduct
+                td.miniCartProductThumb(style='20%')
+                  div
+                    a(href='product-details.html')
+                      img(src='images/product/3.jpg', alt='img')
+                td(style='40%')
+                  .miniCartDescription
+                    h4
+                      a(href='product-details.html')  TSHOP T shirt Black
+                    span.size  12 x 1.5 L
+                    .price
+                      span  $8.80
+                td.miniCartQuantity(style='10%')
+                  a  X 1
+                td.miniCartSubtotal(style='15%')
+                  span  $8.80
+                td.delete(style='5%')
+                  a  x
+              tr.miniCartProduct
+                td.miniCartProductThumb(style='20%')
+                  div
+                    a(href='product-details.html')
+                      img(src='images/product/4.jpg', alt='img')
+                td(style='40%')
+                  .miniCartDescription
+                    h4
+                      a(href='product-details.html')  TSHOP T shirt Black
+                    span.size  12 x 1.5 L
+                    .price
+                      span  $8.80
+                td.miniCartQuantity(style='10%')
+                  a  X 1
+                td.miniCartSubtotal(style='15%')
+                  span  $8.80
+                td.delete(style='5%')
+                  a  x
+        // /.miniCartTable
+        .miniCartFooter.miniCartFooterInMobile.text-right
+          h3.text-right.subtotal  总共: ￥210
+          a.btn.btn-sm.btn-danger
+            i.fa.fa-shopping-cart
+            |  查看购物车
+          a.btn.btn-sm.btn-primary  结账
+        // /.miniCartFooter
+      // /.cartMenu
+    // /.navbar-cart
+    .navbar-collapse.collapse
+      ul.nav.navbar-nav
+        li.active
+          a(href='index.html')  首页
+        li.dropdown.megamenu-fullwidth
+          a.dropdown-toggle(data-toggle='dropdown', href='#')
+            | 新品速递
+            b.caret
           ul.dropdown-menu
-            li
-              a(href='/products') For him
-            li
-              a(href='/products') For her
-        li.dropdown
-          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-            | 女装 
-            span.caret
+            li.megamenu-content
+              // megamenu-content
+              .row
+                .col-sm-6
+                  .padding20
+                    .row
+                      .col-sm-6
+                        p 女装
+                      .col-sm-6.text-right
+                        p
+                          a(href='#')  More >
+                    .row
+                      ul.col-lg-4.col-sm-4.col-md-4.col-xs-6
+                        li.no-margin.productPopItem
+                          a(href='product-details.html')
+                            img.img-responsive(src='images/site/g4.jpg', alt='img')
+                          a(href='product-details.html')
+                            | Eodem modo
+                            | typi
+                            br
+                            span  ￥60
+                      ul.col-lg-4.col-sm-4.col-md-4.col-xs-6
+                        li.no-margin.productPopItem
+                          a(href='product-details.html')
+                            img.img-responsive(src='images/site/g4.jpg', alt='img')
+                          a(href='product-details.html')
+                            | Eodem modo
+                            | typi
+                            br
+                            span  ￥60
+                      ul.col-lg-4.col-sm-4.col-md-4.col-xs-6
+                        li.no-margin.productPopItem
+                          a(href='product-details.html')
+                            img.img-responsive(src='images/site/g4.jpg', alt='img')
+                          a(href='product-details.html')
+                            | Eodem modo
+                            | typi
+                            br
+                            span  ￥60
+                .col-sm-6
+                  .padding20
+                    .row
+                      .col-sm-6
+                        p 男装
+                      .col-sm-6.text-right
+                        p
+                          a(href='#')  More >
+                    .row
+                      ul.col-lg-4.col-sm-4.col-md-4.col-xs-6
+                        li.no-margin.productPopItem
+                          a(href='product-details.html')
+                            img.img-responsive(src='images/site/g4.jpg', alt='img')
+                          a(href='product-details.html')
+                            | Eodem modo
+                            | typi
+                            br
+                            span  ￥60
+                      ul.col-lg-4.col-sm-4.col-md-4.col-xs-6
+                        li.no-margin.productPopItem
+                          a(href='product-details.html')
+                            img.img-responsive(src='images/site/g4.jpg', alt='img')
+                          a(href='product-details.html')
+                            | Eodem modo
+                            | typi
+                            br
+                            span  ￥60
+                      ul.col-lg-4.col-sm-4.col-md-4.col-xs-6
+                        li.no-margin.productPopItem
+                          a(href='product-details.html')
+                            img.img-responsive(src='images/site/g4.jpg', alt='img')
+                          a(href='product-details.html')
+                            | Eodem modo
+                            | typi
+                            br
+                            span  ￥60
+        li.dropdown.megamenu-fullwidth
+          a.dropdown-toggle(data-toggle='dropdown', href='women.html')
+            | 女装
+            b.caret
           ul.dropdown-menu
-            li
-              a(href='/products') 设计师
-            li
-              a(href='/products') 服装
-            li
-              a(href='/products') 配饰
-        li.dropdown
-          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-            | 男装 
-            span.caret
+            li.megamenu-content
+              // megamenu-content
+              ul.col-lg-3.col-sm-3.col-md-3.unstyled.noMarginLeft
+                li
+                  p
+                    strong  设计师
+                li
+                  a(href='#')  Kameez
+                li
+                  a(href='#')  Tops
+                li
+                  a(href='#')  Shoes
+                li
+                  a(href='#')  T shirt
+                li
+                  a(href='#')  TSHOP
+                li
+                  a(href='#')  Party Dress
+                li
+                  a(href='#')  Women Fragrances
+              ul.col-lg-3.col-sm-3.col-md-3.unstyled
+                li
+                  p
+                    strong  服装
+                li
+                  a(href='#')  Panjabi
+                li
+                  a(href='#')  Male Fragrances
+                li
+                  a(href='#')  Scarf
+                li
+                  a(href='#')  Sandal
+                li
+                  a(href='#')  Underwear
+                li
+                  a(href='#')  Winter Collection
+                li
+                  a(href='#')  Men Accessories
+              ul.col-lg-3.col-sm-3.col-md-3.unstyled
+                li
+                  p
+                    strong  配件
+                li
+                  a(href='#')  Diesel
+                li
+                  a(href='#')  Farah
+                li
+                  a(href='#')  G-Star RAW
+                li
+                  a(href='#')  Lyle & Scott
+                li
+                  a(href='#')  Pretty Green
+                li
+                  a(href='#')  TSHOP
+                li
+                  a(href='#')  TANJIM
+              .col-lg-3.col-sm-3.col-md-3.col-xs-6
+                .padding-left-right-30
+                  div(href='product-details.html')
+                    | Eodem modo
+                    | typi
+                  div 设计师
+                  div $60
+                  a(href='product-details.html')
+                    img.img-responsive(src='images/site/g4.jpg', alt='img')
+        li.dropdown.megamenu-fullwidth
+          a.dropdown-toggle(data-toggle='dropdown', href='#')
+            | 男装
+            b.caret
           ul.dropdown-menu
-            li
-              a(href='/products') 设计师
-            li
-              a(href='/products') 服装
-            li
-              a(href='/products') 配饰
-        li.dropdown
-          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-            | 折扣 
-            span.caret
+            li.megamenu-content
+              // megamenu-content
+              ul.col-lg-3.col-sm-3.col-md-3.unstyled.noMarginLeft
+                li
+                  p
+                    strong  设计师
+                li
+                  a(href='#')  Kameez
+                li
+                  a(href='#')  Tops
+                li
+                  a(href='#')  Shoes
+                li
+                  a(href='#')  T shirt
+                li
+                  a(href='#')  TSHOP
+                li
+                  a(href='#')  Party Dress
+                li
+                  a(href='#')  Women Fragrances
+              ul.col-lg-3.col-sm-3.col-md-3.unstyled
+                li
+                  p
+                    strong  服装
+                li
+                  a(href='#')  Panjabi
+                li
+                  a(href='#')  Male Fragrances
+                li
+                  a(href='#')  Scarf
+                li
+                  a(href='#')  Sandal
+                li
+                  a(href='#')  Underwear
+                li
+                  a(href='#')  Winter Collection
+                li
+                  a(href='#')  Men Accessories
+              ul.col-lg-3.col-sm-3.col-md-3.unstyled
+                li
+                  p
+                    strong  配件
+                li
+                  a(href='#')  Diesel
+                li
+                  a(href='#')  Farah
+                li
+                  a(href='#')  G-Star RAW
+                li
+                  a(href='#')  Lyle & Scott
+                li
+                  a(href='#')  Pretty Green
+                li
+                  a(href='#')  TSHOP
+                li
+                  a(href='#')  TANJIM
+              .col-lg-3.col-sm-3.col-md-3.col-xs-6
+                .padding-left-right-30
+                  div(href='product-details.html')
+                    | Eodem modo
+                    | typi
+                  div 设计师
+                  div $60
+                  a(href='product-details.html')
+                    img.img-responsive(src='images/site/g4.jpg', alt='img')
+        li.dropdown.megamenu-fullwidth
+          a.dropdown-toggle(data-toggle='dropdown', href='#')
+            | 折扣
+            b.caret
           ul.dropdown-menu
-            li
-              a(href='/products') 男装
-            li
-              a(href='/products') 女装
-      form.navbar-form.navbar-right(role='search' ng-controller='productsCtrl')
-        .form-group
-          input.form-control(type='text' placeholder='Search' ng-model='product.designer' typeahead='product.designer for product in products | filter: $viewValue | limitTo: 8')
-        button.btn.btn-default(type='submit') Go
+            li.megamenu-content
+              .row
+                .col-sm-6
+                  .padding-left-right-30
+                    .row.b-border
+                      .col-sm-6
+                        h5 女装
+                      .col-sm-6.text-right
+                        h5 All >
+                    .row
+                      .col-sm-6
+                        h5.text-center.mt-10.mb-10 服装
+                        ul.col-lg-6.col-sm-6.col-md-6.text-center
+                          li
+                            a(href='#')  上衣
+                          li
+                            a(href='#')  裤子
+                          li
+                            a(href='#')  裙子
+                          li
+                            a(href='#')  T恤
+                          li
+                            a(href='#')  内衣
+                          li
+                            a(href='#')  礼服
+                          li
+                            a(href='#')  内衣
+                        ul.col-lg-6.col-sm-6.col-md-6.text-center
+                          li
+                            a(href='#')  泳装
+                          li
+                            a(href='#')  牛仔
+                          li
+                            a(href='#')  针织衫
+                          li
+                            a(href='#')  晚礼服
+                          li
+                            a(href='#')  风衣
+                          li
+                            a(href='#')  其他
+                      .col-sm-6
+                        h5.text-center.mt-10.mb-10 配饰
+                        ul.col-lg-6.col-sm-6.col-md-6.text-center
+                          li
+                            a(href='#')  眼睛
+                          li
+                            a(href='#')  太阳镜
+                          li
+                            a(href='#')  手套
+                          li
+                            a(href='#')  帽子
+                        ul.col-lg-6.col-sm-6.col-md-6.text-center
+                          li
+                            a(href='#')  珠宝
+                          li
+                            a(href='#')  手表
+                          li
+                            a(href='#')  胸针
+                          li
+                            a(href='#')  其他
+                .col-sm-6
+                  .padding-left-right-30
+                    .row.b-border
+                      .col-sm-6
+                        h5 男装
+                      .col-sm-6.text-right
+                        h5 All >
+                    .row
+                      .col-sm-6
+                        h5.text-center.mt-10.mb-10 服装
+                        ul.col-lg-6.col-sm-6.col-md-6.text-center
+                          li
+                            a(href='#')  上衣
+                          li
+                            a(href='#')  裤子
+                          li
+                            a(href='#')  裙子
+                          li
+                            a(href='#')  T恤
+                          li
+                            a(href='#')  内衣
+                          li
+                            a(href='#')  礼服
+                          li
+                            a(href='#')  内衣
+                        ul.col-lg-6.col-sm-6.col-md-6.text-center
+                          li
+                            a(href='#')  泳装
+                          li
+                            a(href='#')  牛仔
+                          li
+                            a(href='#')  针织衫
+                          li
+                            a(href='#')  晚礼服
+                          li
+                            a(href='#')  风衣
+                          li
+                            a(href='#')  其他
+                      .col-sm-6
+                        h5.text-center.mt-10.mb-10 配饰
+                        ul.col-lg-6.col-sm-6.col-md-6.text-center
+                          li
+                            a(href='#')  眼睛
+                          li
+                            a(href='#')  太阳镜
+                          li
+                            a(href='#')  手套
+                          li
+                            a(href='#')  帽子
+                        ul.col-lg-6.col-sm-6.col-md-6.text-center
+                          li
+                            a(href='#')  珠宝
+                          li
+                            a(href='#')  手表
+                          li
+                            a(href='#')  胸针
+                          li
+                            a(href='#')  其他
+      // - this part will be hidden for mobile version
+      .nav.navbar-nav.navbar-right.hidden-xs
+        .dropdown.cartMenu
+          a.dropdown-toggle(href='#', data-toggle='dropdown')
+            i.fa.fa-shopping-cart
+          .dropdown-menu.col-lg-4.col-xs-12.col-md-4
+            .w100.miniCartTable.scroll-pane
+              table
+                tbody
+                  tr.miniCartProduct
+                    td.miniCartProductThumb(style='width:20%')
+                      div
+                        a(href='product-details.html')
+                          img(src='images/product/3.jpg', alt='img')
+                    td(style='width:40%')
+                      .miniCartDescription
+                        h4
+                          a(href='product-details.html')  TSHOP Tshirt DO9
+                        span.size  12 x 1.5 L
+                        .price
+                          span  $22
+                    td.miniCartQuantity(style='width:10%')
+                      a  X 1
+                    td.miniCartSubtotal(style='width:15%')
+                      span  $33
+                    td.delete(style='width:5%')
+                      a  x
+                  tr.miniCartProduct
+                    td.miniCartProductThumb(style='width:20%')
+                      div
+                        a(href='product-details.html')
+                          img(src='images/product/2.jpg', alt='img')
+                    td(style='width:40%')
+                      .miniCartDescription
+                        h4
+                          a(href='product-details.html')  TShir TSHOP 09
+                        span.size  12 x 1.5 L
+                        .price
+                          span  $15
+                    td.miniCartQuantity(style='width:10%')
+                      a  X 1
+                    td.miniCartSubtotal(style='width:15%')
+                      span  $120
+                    td.delete(style='width:5%')
+                      a  x
+                  tr.miniCartProduct
+                    td.miniCartProductThumb(style='width:20%')
+                      div
+                        a(href='product-details.html')
+                          img(src='images/product/5.jpg', alt='img')
+                    td(style='width:40%')
+                      .miniCartDescription
+                        h4
+                          a(href='product-details.html')  Tshir 2014
+                        span.size  12 x 1.5 L
+                        .price
+                          span  $30
+                    td.miniCartQuantity(style='width:10%')
+                      a  X 1
+                    td.miniCartSubtotal(style='width:15%')
+                      span  $80
+                    td.delete(style='width:5%')
+                      a  x
+                  tr.miniCartProduct
+                    td.miniCartProductThumb(style='width:20%')
+                      div
+                        a(href='product-details.html')
+                          img(src='images/product/3.jpg', alt='img')
+                    td(style='width:40%')
+                      .miniCartDescription
+                        h4
+                          a(href='product-details.html')  TSHOP T shirt DO20
+                        span.size  12 x 1.5 L
+                        .price
+                          span  $15
+                    td.miniCartQuantity(style='width:10%')
+                      a  X 1
+                    td.miniCartSubtotal(style='width:15%')
+                      span  $55
+                    td.delete(style='width:5%')
+                      a  x
+                  tr.miniCartProduct
+                    td.miniCartProductThumb(style='width:20%')
+                      div
+                        a(href='product-details.html')
+                          img(src='images/product/4.jpg', alt='img')
+                    td(style='width:40%')
+                      .miniCartDescription
+                        h4
+                          a(href='product-details.html')  T shirt Black
+                        span.size  12 x 1.5 L
+                        .price
+                          span  $44
+                    td.miniCartQuantity(style='width:10%')
+                      a  X 1
+                    td.miniCartSubtotal(style='width:15%')
+                      span  $40
+                    td.delete(style='width:5%')
+                      a  x
+                  tr.miniCartProduct
+                    td.miniCartProductThumb(style='width:20%')
+                      div
+                        a(href='product-details.html')
+                          img(src='images/site/winter.jpg', alt='img')
+                    td(style='width:40%')
+                      .miniCartDescription
+                        h4
+                          a(href='product-details.html')  G Star T shirt
+                        span.size  12 x 1.5 L
+                        .price
+                          span  $80
+                    td.miniCartQuantity(style='width:10%')
+                      a  X 1
+                    td.miniCartSubtotal(style='width:15%')
+                      span  $8.80
+                    td.delete(style='width:5%')
+                      a  x
+            // /.miniCartTable
+            .miniCartFooter.text-right
+              h3.text-right.subtotal  总计: $210
+              a.btn.btn-sm.btn-danger
+                i.fa.fa-shopping-cart
+                |  查看购物车
+              a.btn.btn-sm.btn-primary  结账
+            // /.miniCartFooter
+          // /.dropdown-menu
+        // /.cartMenu
+        #search_block_top.style1
+          form#searchbox(method='get', action='#' role='search' ng-controller='productsCtrl')
+            input(type='hidden', name='controller', value='search')
+            input(type='hidden', name='orderby', value='position')
+            input(type='hidden', name='orderway', value='desc')
+            input#search_query_top.search_query.form-control.ac_input(type='text', name='search_query', placeholder='搜索 ...', value='', autocomplete='off' ng-model='product.designer' typeahead='product.designer for product in products | filter: $viewValue | limitTo: 8')
+            button.btn.btn-default.button-search(type='submit', name='submit_search')
+              span Search
+        // /.search-box
+      // /.navbar-nav hidden-xs
+    // /.nav-collapse
+  // /.container
+// /.Fixed navbar

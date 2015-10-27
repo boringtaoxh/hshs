@@ -1,27 +1,90 @@
 #products(ng-controller='productsCtrl')
-  .row
-    aside#filters.col-xs-2
-      setion#designers 
-        h4.filter 设计师
-        ul.row
-          li.col-xs-12(ng-repeat='designer in designers') 
-            a(href='#') {{designer}}
-      setion#category
-        h4.filter 服装
-        ul.row
-          li.col-xs-6(ng-repeat='category in categories') 
-            a(href='#') {{category}}
-      setion#price 
-        h4.filter 价格
-        ul.row
-          li.col-xs-12(ng-repeat='price in prices') 
-            a(href='#') {{price}}
-    article#products.col-xs-10
-      ul.row
-        li.col-xs-3(ng-repeat='product in products')
-          img.img-responsive(data-src='holder.js/210x280')
-          .designer {{product.designer}}
-          .name Product-{{product.id}}
-          .price ￥{{product.price}}
-      div.text-right
-        pagination.pagination-sm(total-items='bigTotalItems', ng-model='bigCurrentPage', max-size='maxSize', boundary-links='true')
+  .container.main-container.headerOffset.globalPaddingBottom
+    .row
+      #left_column.column.col-xs-12.col-sm-3
+        .panel.panel-default.mb-30
+          .panel-heading
+            h4.title_block
+              a.collapseWill(data-toggle='collapse', href='#collapseBrand')
+                | 设计师
+                span.pull-left
+                  i.fa.fa-caret-right
+          #collapseBrand.panel-collapse.collapse.in
+            .panel-body.smoothscroll.maxheight300
+              .block-element(ng-repeat='designer in designers')
+                label
+                  input(type='checkbox', name='tour', value='0')
+                  | {{designer}}
+        .panel.panel-default.mb-30
+          .panel-heading
+            h4.title_block
+              a.collapseWill(data-toggle='collapse', href='#collapseBrand')
+                | 分类
+                span.pull-left
+                  i.fa.fa-caret-right
+          #collapseBrand.panel-collapse.collapse.in
+            .panel-body.smoothscroll.maxheight300
+              .block-element(ng-repeat='category in categories')
+                label
+                  input(type='checkbox', name='tour', value='0')
+                  | {{category}}
+        .panel.panel-default.mb-30
+          .panel-heading
+            h4.title_block
+              a.collapseWill(data-toggle='collapse', href='#collapseColor')
+                | 颜色
+                span.pull-left
+                  i.fa.fa-caret-right
+          #collapseColor.panel-collapse.collapse.in
+            .panel-body.smoothscroll.maxheight300.color-filter
+              .block-element(ng-repeat='color in colors')
+                label
+                  input(type='checkbox', name='tour', value='0')
+                  small(style='background-color:{{color.value}}')
+                  |{{color.name}}
+                  span ({{color.quantity}})
+        .panel.panel-default.mb-30
+          .panel-heading
+            h4.title_block
+              a.collapseWill(data-toggle='collapse', href='#collapsePrice')
+                | 价格
+                span.pull-left
+                  i.fa.fa-caret-right
+          #collapsePrice.panel-collapse.collapse.in
+            .panel-body.smoothscroll.maxheight300.color-filter
+              .block-element(ng-repeat='price in prices')
+                label
+                  input(type='checkbox', name='tour', value='0')
+                  | {{price}}
+      #center_column.col-xs-12.col-sm-9
+        .mb-30.mt-10
+          img.img-responsive(src='images/category.jpg')
+        ul.product_list.grid.row
+          li.ajax_block_product.col-xs-12.col-sm-6.col-md-4(ng-repeat='product in products')
+            .product-container.style3.clearfix(itemscope='', itemtype='')
+              .left-block
+                .product-image-container
+                  .vel-image-more(data-idproduct='1')
+                    a(href='#', title='')
+                      img.img-responsive(data-src='holder.js/260x347')
+                  a.product_img_link(href='#', title='', itemprop='url')
+                    img.img-responsive(data-src='holder.js/260x347', alt='', title='', itemprop='image')
+                  .content_price.price_prefix(itemprop='offers', itemscope='')
+                    span.price.product-price(itemprop='price', itemscope='')  ￥{{product.price}}
+                    span.old-price.product-price  ￥{{product.price}}
+              .right-block
+                h5(itemprop='name')
+                  a.product-name(href='#', title='Product-{{product.id}}')  Product-{{product.id}}
+                .comments_note.clearfix
+                  .text-center
+                    | {{product.designer}}
+                  .price
+                    span.price.product-price  ￥{{product.price}}
+                    span.old-price.product-price  ￥{{product.price}}
+                  .button-container.clearfix
+                    a.addToWishlist.text-center(href='#')
+                      i.fa.fa-heart-o
+                    a.button.ajax_add_to_cart_button.text-center(href='#')
+                      i.fa.fa-shopping-cart
+        .row.mb-30.mt-30.text-center
+          pagination.pagination-sm(total-items='bigTotalItems', ng-model='bigCurrentPage', max-size='maxSize',boundary-links='true', previous-text="‹", next-text="›", first-text="«", last-text="»")

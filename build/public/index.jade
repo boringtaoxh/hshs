@@ -3,17 +3,67 @@ html
     meta(charset='UTF-8')
     meta(name="viewport" content="width=1170")
     title 绘事后素
-    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
+    link(rel="stylesheet" href="/assets/css/bootstrap.css")
     link(rel='stylesheet', href='/vendor-extra/angular-ui-grid/ui-grid.min.css')
     link(rel='stylesheet', href='/assets/css/styles.css')
+    link(rel='stylesheet', href='/assets/css/custom.css')
+    link(rel='stylesheet', href='/assets/css/fu.css')
     script(src='/assets/js/vendor.js')
     base(href='/')
   body(ng-app='hshs' ng-cloak)
-    .container
-      header
-        include views/partials/nav-top
-      section
-        ui-view
-    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+    header
+      include views/partials/nav-top
+    section
+      ui-view
+    footer
+        include views/partials/footer
+    script(type='text/javascript', src='assets/js/jquery/jquery-1.10.1.min.js')
+    script(src='assets/js/bootstrap.min.js')
+    script(src='assets/js/idangerous.swiper-2.1.min.js')
+    script.
+      var mySwiper = new Swiper('.swiper-container', {
+        pagination: '.box-pagination',
+        keyboardControl: true,
+        paginationClickable: true,
+        slidesPerView: 'auto',
+        autoResize: true,
+        resizeReInit: true,
+      })
+      $('.prevControl').on('click', function (e) {
+        e.preventDefault()
+        mySwiper.swipePrev()
+      })
+      $('.nextControl').on('click', function (e) {
+        e.preventDefault()
+        mySwiper.swipeNext()
+      })
+
     script(src='/vendor-extra/angular-ui-grid/ui-grid.min.js')
+    // include jqueryCycle plugin
+    script(src='assets/js/jquery.cycle2.min.js')
+    // include easing plugin
+    script(src='assets/js/jquery.easing.1.3.js')
+    // include  parallax plugin
+    script(type='text/javascript', src='assets/js/jquery.parallax-1.1.js')
+    // optionally include helper plugins
+    script(type='text/javascript', src='assets/js/helper-plugins/jquery.mousewheel.min.js')
+    // include mCustomScrollbar plugin //Custom Scrollbar
+    script(type='text/javascript', src='assets/js/jquery.mCustomScrollbar.js')
+    // include checkRadio plugin //Custom check & Radio
+    script(type='text/javascript', src='assets/js/ion-checkRadio/ion.checkRadio.min.js')
+    // include grid.js // for equal Div height
+    script(src='assets/js/grids.js')
+    script(src='assets/js/login.js')
+    // include carousel slider plugin
+    script(src='assets/js/owl.carousel.min.js')
+    script(src='assets/js/jquery.magnific-popup.min.js')
+    // jQuery minimalect // custom select
+    script(src='assets/js/jquery.minimalect.min.js')
+    // include touchspin.js // touch friendly input spinner component
+    script(src='assets/js/bootstrap.touchspin.js')
+    // include custom script for only homepage
+    script(src='assets/js/home.js')
+    // include custom script for site
+    script(src='assets/js/script.js')
+    script(src='assets/js/leon.js')
     script(src='/assets/js/app.js')

@@ -4,65 +4,680 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=1170"/>
     <title>绘事后素</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css"/>
     <link rel="stylesheet" href="/vendor-extra/angular-ui-grid/ui-grid.min.css"/>
     <link rel="stylesheet" href="/assets/css/styles.css"/>
+    <link rel="stylesheet" href="/assets/css/custom.css"/>
+    <link rel="stylesheet" href="/assets/css/fu.css"/>
     <script src="/assets/js/vendor.js"></script>
     <base href="/"/>
   </head>
   <body ng-app="hshs" ng-cloak="ng-cloak">
-    <div class="container">
-      <header>
-        <nav class="navbar navbar-default">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand">绘事后素</a>
-            </div>
-            <div id="navbar-collapse" class="collapse navbar-collapse">
-              <ul class="nav navbar-nav">      
-                <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">新品速递 <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="/products">For him</a></li>
-                    <li><a href="/products">For her</a></li>
+    <header>
+      <nav role="navigation" class="navbar navbar-tshop navbar-fixed-top megamenu">
+        <div class="navbar-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6">
+                <div class="pull-left">
+                  <ul class="userMenu">
+                    <li><a href="#"><span class="hidden-xs">电话</span><i class="glyphicon glyphicon-info-sign hide visible-xs"></i></a></li>
+                    <li class="phone-number"><a href="callto:+88016000000"><span><i style="margin-top:6px;margin-right:5px" class="glyphicon glyphicon-phone-alt"></i></span><span class="hidden-xs">88 01680 53 1352</span></a></li>
                   </ul>
-                </li>
-                <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">女装 <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="/products">设计师</a></li>
-                    <li><a href="/products">服装</a></li>
-                    <li><a href="/products">配饰</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">男装 <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="/products">设计师</a></li>
-                    <li><a href="/products">服装</a></li>
-                    <li><a href="/products">配饰</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">折扣 <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="/products">男装</a></li>
-                    <li><a href="/products">女装</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <form role="search" ng-controller="productsCtrl" class="navbar-form navbar-right">
-                <div class="form-group">
-                  <input type="text" placeholder="Search" ng-model="product.designer" typeahead="product.designer for product in products | filter: $viewValue | limitTo: 8" class="form-control"/>
                 </div>
-                <button type="submit" class="btn btn-default">Go</button>
-              </form>
+              </div>
+              <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 no-margin no-padding">
+                <div class="pull-right">
+                  <ul class="userMenu">
+                    <li><a href="account-1.html"><span class="hidden-xs"> 我的账户</span><i class="glyphicon glyphicon-user hide visible-xs"></i></a></li>
+                    <li><a href="#register-form" data-toggle="modal" data-target="#ModalLogin" class="pop-up"><span class="hidden-xs">注册</span><i class="glyphicon glyphicon-log-in hide visible-xs"></i></a></li>
+                    <li class="hidden-xs"><a href="#login-form" data-toggle="modal" data-target="#ModalSignup" class="pop-up">登录</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-        </nav>
-      </header>
-      <section>
-        <ui-view></ui-view>
-      </section>
-    </div>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        </div>
+        <!-- /.navbar-top-->
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="sr-only"> Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            <button type="button" data-toggle="collapse" data-target=".navbar-cart" class="navbar-toggle"><i class="fa fa-shopping-cart colorWhite"></i><span class="cartRespons colorWhite"> 购物车 (￥210.00)</span></button><a href="index.html" class="navbar-brand"><img src="images/u28.png" alt="绘事后素"/></a>
+            <!-- this part for mobile-->
+            <div class="search-box pull-right hidden-lg hidden-md hidden-sm">
+              <div class="input-group">
+                <button type="button" class="btn btn-nobg getFullSearch"><i class="fa fa-search"></i></button>
+              </div>
+              <!-- /input-group-->
+            </div>
+          </div>
+          <!-- this part is duplicate from cartMenu  keep it for mobile-->
+          <div class="navbar-cart collapse">
+            <div class="cartMenu col-lg-4 col-xs-12 col-md-4">
+              <div class="w100 miniCartTable scroll-pane">
+                <table>
+                  <tbody>
+                    <tr class="miniCartProduct">
+                      <td style="20%" class="miniCartProductThumb">
+                        <div><a href="product-details.html"><img src="images/product/3.jpg" alt="img"/></a></div>
+                      </td>
+                      <td style="40%">
+                        <div class="miniCartDescription">
+                          <h4><a href="product-details.html"> TSHOP T shirt Black</a></h4><span class="size"> 12 x 1.5 L</span>
+                          <div class="price"><span> $8.80</span></div>
+                        </div>
+                      </td>
+                      <td style="10%" class="miniCartQuantity"><a> X 1</a></td>
+                      <td style="15%" class="miniCartSubtotal"><span> $8.80</span></td>
+                      <td style="5%" class="delete"><a> x</a></td>
+                    </tr>
+                    <tr class="miniCartProduct">
+                      <td style="20%" class="miniCartProductThumb">
+                        <div><a href="product-details.html"><img src="images/product/2.jpg" alt="img"/></a></div>
+                      </td>
+                      <td style="40%">
+                        <div class="miniCartDescription">
+                          <h4><a href="product-details.html"> TSHOP T shirt Black</a></h4><span class="size"> 12 x 1.5 L</span>
+                          <div class="price"><span> $8.80</span></div>
+                        </div>
+                      </td>
+                      <td style="10%" class="miniCartQuantity"><a> X 1</a></td>
+                      <td style="15%" class="miniCartSubtotal"><span> $8.80</span></td>
+                      <td style="5%" class="delete"><a> x</a></td>
+                    </tr>
+                    <tr class="miniCartProduct">
+                      <td style="20%" class="miniCartProductThumb">
+                        <div><a href="product-details.html"><img src="images/product/5.jpg" alt="img"/></a></div>
+                      </td>
+                      <td style="40%">
+                        <div class="miniCartDescription">
+                          <h4><a href="product-details.html"> TSHOP T shirt Black</a></h4><span class="size"> 12 x 1.5 L</span>
+                          <div class="price"><span> $8.80</span></div>
+                        </div>
+                      </td>
+                      <td style="10%" class="miniCartQuantity"><a> X 1</a></td>
+                      <td style="15%" class="miniCartSubtotal"><span> $8.80</span></td>
+                      <td style="5%" class="delete"><a> x</a></td>
+                    </tr>
+                    <tr class="miniCartProduct">
+                      <td style="20%" class="miniCartProductThumb">
+                        <div><a href="product-details.html"><img src="images/product/3.jpg" alt="img"/></a></div>
+                      </td>
+                      <td style="40%">
+                        <div class="miniCartDescription">
+                          <h4><a href="product-details.html"> TSHOP T shirt Black</a></h4><span class="size"> 12 x 1.5 L</span>
+                          <div class="price"><span> $8.80</span></div>
+                        </div>
+                      </td>
+                      <td style="10%" class="miniCartQuantity"><a> X 1</a></td>
+                      <td style="15%" class="miniCartSubtotal"><span> $8.80</span></td>
+                      <td style="5%" class="delete"><a> x</a></td>
+                    </tr>
+                    <tr class="miniCartProduct">
+                      <td style="20%" class="miniCartProductThumb">
+                        <div><a href="product-details.html"><img src="images/product/3.jpg" alt="img"/></a></div>
+                      </td>
+                      <td style="40%">
+                        <div class="miniCartDescription">
+                          <h4><a href="product-details.html"> TSHOP T shirt Black</a></h4><span class="size"> 12 x 1.5 L</span>
+                          <div class="price"><span> $8.80</span></div>
+                        </div>
+                      </td>
+                      <td style="10%" class="miniCartQuantity"><a> X 1</a></td>
+                      <td style="15%" class="miniCartSubtotal"><span> $8.80</span></td>
+                      <td style="5%" class="delete"><a> x</a></td>
+                    </tr>
+                    <tr class="miniCartProduct">
+                      <td style="20%" class="miniCartProductThumb">
+                        <div><a href="product-details.html"><img src="images/product/4.jpg" alt="img"/></a></div>
+                      </td>
+                      <td style="40%">
+                        <div class="miniCartDescription">
+                          <h4><a href="product-details.html"> TSHOP T shirt Black</a></h4><span class="size"> 12 x 1.5 L</span>
+                          <div class="price"><span> $8.80</span></div>
+                        </div>
+                      </td>
+                      <td style="10%" class="miniCartQuantity"><a> X 1</a></td>
+                      <td style="15%" class="miniCartSubtotal"><span> $8.80</span></td>
+                      <td style="5%" class="delete"><a> x</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.miniCartTable-->
+              <div class="miniCartFooter miniCartFooterInMobile text-right">
+                <h3 class="text-right subtotal"> 总共: ￥210</h3><a class="btn btn-sm btn-danger"><i class="fa fa-shopping-cart"></i> 查看购物车</a><a class="btn btn-sm btn-primary"> 结账</a>
+              </div>
+              <!-- /.miniCartFooter-->
+            </div>
+            <!-- /.cartMenu-->
+          </div>
+          <!-- /.navbar-cart-->
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html"> 首页</a></li>
+              <li class="dropdown megamenu-fullwidth"><a data-toggle="dropdown" href="#" class="dropdown-toggle">新品速递<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li class="megamenu-content">
+                    <!-- megamenu-content-->
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="padding20">
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <p>女装</p>
+                            </div>
+                            <div class="col-sm-6 text-right">
+                              <p><a href="#"> More ></a></p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <ul class="col-lg-4 col-sm-4 col-md-4 col-xs-6">
+                              <li class="no-margin productPopItem"><a href="product-details.html"><img src="images/site/g4.jpg" alt="img" class="img-responsive"/></a><a href="product-details.html">
+                                  Eodem modo
+                                  typi<br/><span> ￥60</span></a></li>
+                            </ul>
+                            <ul class="col-lg-4 col-sm-4 col-md-4 col-xs-6">
+                              <li class="no-margin productPopItem"><a href="product-details.html"><img src="images/site/g4.jpg" alt="img" class="img-responsive"/></a><a href="product-details.html">
+                                  Eodem modo
+                                  typi<br/><span> ￥60</span></a></li>
+                            </ul>
+                            <ul class="col-lg-4 col-sm-4 col-md-4 col-xs-6">
+                              <li class="no-margin productPopItem"><a href="product-details.html"><img src="images/site/g4.jpg" alt="img" class="img-responsive"/></a><a href="product-details.html">
+                                  Eodem modo
+                                  typi<br/><span> ￥60</span></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="padding20">
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <p>男装</p>
+                            </div>
+                            <div class="col-sm-6 text-right">
+                              <p><a href="#"> More ></a></p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <ul class="col-lg-4 col-sm-4 col-md-4 col-xs-6">
+                              <li class="no-margin productPopItem"><a href="product-details.html"><img src="images/site/g4.jpg" alt="img" class="img-responsive"/></a><a href="product-details.html">
+                                  Eodem modo
+                                  typi<br/><span> ￥60</span></a></li>
+                            </ul>
+                            <ul class="col-lg-4 col-sm-4 col-md-4 col-xs-6">
+                              <li class="no-margin productPopItem"><a href="product-details.html"><img src="images/site/g4.jpg" alt="img" class="img-responsive"/></a><a href="product-details.html">
+                                  Eodem modo
+                                  typi<br/><span> ￥60</span></a></li>
+                            </ul>
+                            <ul class="col-lg-4 col-sm-4 col-md-4 col-xs-6">
+                              <li class="no-margin productPopItem"><a href="product-details.html"><img src="images/site/g4.jpg" alt="img" class="img-responsive"/></a><a href="product-details.html">
+                                  Eodem modo
+                                  typi<br/><span> ￥60</span></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown megamenu-fullwidth"><a data-toggle="dropdown" href="women.html" class="dropdown-toggle">女装<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li class="megamenu-content">
+                    <!-- megamenu-content-->
+                    <ul class="col-lg-3 col-sm-3 col-md-3 unstyled noMarginLeft">
+                      <li>
+                        <p><strong> 设计师</strong></p>
+                      </li>
+                      <li><a href="#"> Kameez</a></li>
+                      <li><a href="#"> Tops</a></li>
+                      <li><a href="#"> Shoes</a></li>
+                      <li><a href="#"> T shirt</a></li>
+                      <li><a href="#"> TSHOP</a></li>
+                      <li><a href="#"> Party Dress</a></li>
+                      <li><a href="#"> Women Fragrances</a></li>
+                    </ul>
+                    <ul class="col-lg-3 col-sm-3 col-md-3 unstyled">
+                      <li>
+                        <p><strong> 服装</strong></p>
+                      </li>
+                      <li><a href="#"> Panjabi</a></li>
+                      <li><a href="#"> Male Fragrances</a></li>
+                      <li><a href="#"> Scarf</a></li>
+                      <li><a href="#"> Sandal</a></li>
+                      <li><a href="#"> Underwear</a></li>
+                      <li><a href="#"> Winter Collection</a></li>
+                      <li><a href="#"> Men Accessories</a></li>
+                    </ul>
+                    <ul class="col-lg-3 col-sm-3 col-md-3 unstyled">
+                      <li>
+                        <p><strong> 配件</strong></p>
+                      </li>
+                      <li><a href="#"> Diesel</a></li>
+                      <li><a href="#"> Farah</a></li>
+                      <li><a href="#"> G-Star RAW</a></li>
+                      <li><a href="#"> Lyle & Scott</a></li>
+                      <li><a href="#"> Pretty Green</a></li>
+                      <li><a href="#"> TSHOP</a></li>
+                      <li><a href="#"> TANJIM</a></li>
+                    </ul>
+                    <div class="col-lg-3 col-sm-3 col-md-3 col-xs-6">
+                      <div class="padding-left-right-30">
+                        <div href="product-details.html">
+                          Eodem modo
+                          typi
+                        </div>
+                        <div>设计师</div>
+                        <div>$60</div><a href="product-details.html"><img src="images/site/g4.jpg" alt="img" class="img-responsive"/></a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown megamenu-fullwidth"><a data-toggle="dropdown" href="#" class="dropdown-toggle">男装<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li class="megamenu-content">
+                    <!-- megamenu-content-->
+                    <ul class="col-lg-3 col-sm-3 col-md-3 unstyled noMarginLeft">
+                      <li>
+                        <p><strong> 设计师</strong></p>
+                      </li>
+                      <li><a href="#"> Kameez</a></li>
+                      <li><a href="#"> Tops</a></li>
+                      <li><a href="#"> Shoes</a></li>
+                      <li><a href="#"> T shirt</a></li>
+                      <li><a href="#"> TSHOP</a></li>
+                      <li><a href="#"> Party Dress</a></li>
+                      <li><a href="#"> Women Fragrances</a></li>
+                    </ul>
+                    <ul class="col-lg-3 col-sm-3 col-md-3 unstyled">
+                      <li>
+                        <p><strong> 服装</strong></p>
+                      </li>
+                      <li><a href="#"> Panjabi</a></li>
+                      <li><a href="#"> Male Fragrances</a></li>
+                      <li><a href="#"> Scarf</a></li>
+                      <li><a href="#"> Sandal</a></li>
+                      <li><a href="#"> Underwear</a></li>
+                      <li><a href="#"> Winter Collection</a></li>
+                      <li><a href="#"> Men Accessories</a></li>
+                    </ul>
+                    <ul class="col-lg-3 col-sm-3 col-md-3 unstyled">
+                      <li>
+                        <p><strong> 配件</strong></p>
+                      </li>
+                      <li><a href="#"> Diesel</a></li>
+                      <li><a href="#"> Farah</a></li>
+                      <li><a href="#"> G-Star RAW</a></li>
+                      <li><a href="#"> Lyle & Scott</a></li>
+                      <li><a href="#"> Pretty Green</a></li>
+                      <li><a href="#"> TSHOP</a></li>
+                      <li><a href="#"> TANJIM</a></li>
+                    </ul>
+                    <div class="col-lg-3 col-sm-3 col-md-3 col-xs-6">
+                      <div class="padding-left-right-30">
+                        <div href="product-details.html">
+                          Eodem modo
+                          typi
+                        </div>
+                        <div>设计师</div>
+                        <div>$60</div><a href="product-details.html"><img src="images/site/g4.jpg" alt="img" class="img-responsive"/></a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown megamenu-fullwidth"><a data-toggle="dropdown" href="#" class="dropdown-toggle">折扣<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li class="megamenu-content">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="padding-left-right-30">
+                          <div class="row b-border">
+                            <div class="col-sm-6">
+                              <h5>女装</h5>
+                            </div>
+                            <div class="col-sm-6 text-right">
+                              <h5>All ></h5>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <h5 class="text-center mt-10 mb-10">服装</h5>
+                              <ul class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                <li><a href="#"> 上衣</a></li>
+                                <li><a href="#"> 裤子</a></li>
+                                <li><a href="#"> 裙子</a></li>
+                                <li><a href="#"> T恤</a></li>
+                                <li><a href="#"> 内衣</a></li>
+                                <li><a href="#"> 礼服</a></li>
+                                <li><a href="#"> 内衣</a></li>
+                              </ul>
+                              <ul class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                <li><a href="#"> 泳装</a></li>
+                                <li><a href="#"> 牛仔</a></li>
+                                <li><a href="#"> 针织衫</a></li>
+                                <li><a href="#"> 晚礼服</a></li>
+                                <li><a href="#"> 风衣</a></li>
+                                <li><a href="#"> 其他</a></li>
+                              </ul>
+                            </div>
+                            <div class="col-sm-6">
+                              <h5 class="text-center mt-10 mb-10">配饰</h5>
+                              <ul class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                <li><a href="#"> 眼睛</a></li>
+                                <li><a href="#"> 太阳镜</a></li>
+                                <li><a href="#"> 手套</a></li>
+                                <li><a href="#"> 帽子</a></li>
+                              </ul>
+                              <ul class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                <li><a href="#"> 珠宝</a></li>
+                                <li><a href="#"> 手表</a></li>
+                                <li><a href="#"> 胸针</a></li>
+                                <li><a href="#"> 其他</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="padding-left-right-30">
+                          <div class="row b-border">
+                            <div class="col-sm-6">
+                              <h5>男装</h5>
+                            </div>
+                            <div class="col-sm-6 text-right">
+                              <h5>All ></h5>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <h5 class="text-center mt-10 mb-10">服装</h5>
+                              <ul class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                <li><a href="#"> 上衣</a></li>
+                                <li><a href="#"> 裤子</a></li>
+                                <li><a href="#"> 裙子</a></li>
+                                <li><a href="#"> T恤</a></li>
+                                <li><a href="#"> 内衣</a></li>
+                                <li><a href="#"> 礼服</a></li>
+                                <li><a href="#"> 内衣</a></li>
+                              </ul>
+                              <ul class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                <li><a href="#"> 泳装</a></li>
+                                <li><a href="#"> 牛仔</a></li>
+                                <li><a href="#"> 针织衫</a></li>
+                                <li><a href="#"> 晚礼服</a></li>
+                                <li><a href="#"> 风衣</a></li>
+                                <li><a href="#"> 其他</a></li>
+                              </ul>
+                            </div>
+                            <div class="col-sm-6">
+                              <h5 class="text-center mt-10 mb-10">配饰</h5>
+                              <ul class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                <li><a href="#"> 眼睛</a></li>
+                                <li><a href="#"> 太阳镜</a></li>
+                                <li><a href="#"> 手套</a></li>
+                                <li><a href="#"> 帽子</a></li>
+                              </ul>
+                              <ul class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                <li><a href="#"> 珠宝</a></li>
+                                <li><a href="#"> 手表</a></li>
+                                <li><a href="#"> 胸针</a></li>
+                                <li><a href="#"> 其他</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!-- - this part will be hidden for mobile version-->
+            <div class="nav navbar-nav navbar-right hidden-xs">
+              <div class="dropdown cartMenu"><a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart"></i></a>
+                <div class="dropdown-menu col-lg-4 col-xs-12 col-md-4">
+                  <div class="w100 miniCartTable scroll-pane">
+                    <table>
+                      <tbody>
+                        <tr class="miniCartProduct">
+                          <td style="width:20%" class="miniCartProductThumb">
+                            <div><a href="product-details.html"><img src="images/product/3.jpg" alt="img"/></a></div>
+                          </td>
+                          <td style="width:40%">
+                            <div class="miniCartDescription">
+                              <h4><a href="product-details.html"> TSHOP Tshirt DO9</a></h4><span class="size"> 12 x 1.5 L</span>
+                              <div class="price"><span> $22</span></div>
+                            </div>
+                          </td>
+                          <td style="width:10%" class="miniCartQuantity"><a> X 1</a></td>
+                          <td style="width:15%" class="miniCartSubtotal"><span> $33</span></td>
+                          <td style="width:5%" class="delete"><a> x</a></td>
+                        </tr>
+                        <tr class="miniCartProduct">
+                          <td style="width:20%" class="miniCartProductThumb">
+                            <div><a href="product-details.html"><img src="images/product/2.jpg" alt="img"/></a></div>
+                          </td>
+                          <td style="width:40%">
+                            <div class="miniCartDescription">
+                              <h4><a href="product-details.html"> TShir TSHOP 09</a></h4><span class="size"> 12 x 1.5 L</span>
+                              <div class="price"><span> $15</span></div>
+                            </div>
+                          </td>
+                          <td style="width:10%" class="miniCartQuantity"><a> X 1</a></td>
+                          <td style="width:15%" class="miniCartSubtotal"><span> $120</span></td>
+                          <td style="width:5%" class="delete"><a> x</a></td>
+                        </tr>
+                        <tr class="miniCartProduct">
+                          <td style="width:20%" class="miniCartProductThumb">
+                            <div><a href="product-details.html"><img src="images/product/5.jpg" alt="img"/></a></div>
+                          </td>
+                          <td style="width:40%">
+                            <div class="miniCartDescription">
+                              <h4><a href="product-details.html"> Tshir 2014</a></h4><span class="size"> 12 x 1.5 L</span>
+                              <div class="price"><span> $30</span></div>
+                            </div>
+                          </td>
+                          <td style="width:10%" class="miniCartQuantity"><a> X 1</a></td>
+                          <td style="width:15%" class="miniCartSubtotal"><span> $80</span></td>
+                          <td style="width:5%" class="delete"><a> x</a></td>
+                        </tr>
+                        <tr class="miniCartProduct">
+                          <td style="width:20%" class="miniCartProductThumb">
+                            <div><a href="product-details.html"><img src="images/product/3.jpg" alt="img"/></a></div>
+                          </td>
+                          <td style="width:40%">
+                            <div class="miniCartDescription">
+                              <h4><a href="product-details.html"> TSHOP T shirt DO20</a></h4><span class="size"> 12 x 1.5 L</span>
+                              <div class="price"><span> $15</span></div>
+                            </div>
+                          </td>
+                          <td style="width:10%" class="miniCartQuantity"><a> X 1</a></td>
+                          <td style="width:15%" class="miniCartSubtotal"><span> $55</span></td>
+                          <td style="width:5%" class="delete"><a> x</a></td>
+                        </tr>
+                        <tr class="miniCartProduct">
+                          <td style="width:20%" class="miniCartProductThumb">
+                            <div><a href="product-details.html"><img src="images/product/4.jpg" alt="img"/></a></div>
+                          </td>
+                          <td style="width:40%">
+                            <div class="miniCartDescription">
+                              <h4><a href="product-details.html"> T shirt Black</a></h4><span class="size"> 12 x 1.5 L</span>
+                              <div class="price"><span> $44</span></div>
+                            </div>
+                          </td>
+                          <td style="width:10%" class="miniCartQuantity"><a> X 1</a></td>
+                          <td style="width:15%" class="miniCartSubtotal"><span> $40</span></td>
+                          <td style="width:5%" class="delete"><a> x</a></td>
+                        </tr>
+                        <tr class="miniCartProduct">
+                          <td style="width:20%" class="miniCartProductThumb">
+                            <div><a href="product-details.html"><img src="images/site/winter.jpg" alt="img"/></a></div>
+                          </td>
+                          <td style="width:40%">
+                            <div class="miniCartDescription">
+                              <h4><a href="product-details.html"> G Star T shirt</a></h4><span class="size"> 12 x 1.5 L</span>
+                              <div class="price"><span> $80</span></div>
+                            </div>
+                          </td>
+                          <td style="width:10%" class="miniCartQuantity"><a> X 1</a></td>
+                          <td style="width:15%" class="miniCartSubtotal"><span> $8.80</span></td>
+                          <td style="width:5%" class="delete"><a> x</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.miniCartTable-->
+                  <div class="miniCartFooter text-right">
+                    <h3 class="text-right subtotal"> 总计: $210</h3><a class="btn btn-sm btn-danger"><i class="fa fa-shopping-cart"></i> 查看购物车</a><a class="btn btn-sm btn-primary"> 结账</a>
+                  </div>
+                  <!-- /.miniCartFooter-->
+                </div>
+                <!-- /.dropdown-menu-->
+              </div>
+              <!-- /.cartMenu-->
+              <div id="search_block_top" class="style1">
+                <form id="searchbox" method="get" action="#" role="search" ng-controller="productsCtrl">
+                  <input type="hidden" name="controller" value="search"/>
+                  <input type="hidden" name="orderby" value="position"/>
+                  <input type="hidden" name="orderway" value="desc"/>
+                  <input id="search_query_top" type="text" name="search_query" placeholder="搜索 ..." value="" autocomplete="off" ng-model="product.designer" typeahead="product.designer for product in products | filter: $viewValue | limitTo: 8" class="search_query form-control ac_input"/>
+                  <button type="submit" name="submit_search" class="btn btn-default button-search"><span>Search</span></button>
+                </form>
+              </div>
+              <!-- /.search-box-->
+            </div>
+            <!-- /.navbar-nav hidden-xs-->
+          </div>
+          <!-- /.nav-collapse-->
+        </div>
+        <!-- /.container-->
+      </nav>
+      <!-- /.Fixed navbar-->
+    </header>
+    <section>
+      <ui-view></ui-view>
+    </section>
+    <footer>
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+              <h3> 新手指南</h3>
+              <ul>
+                <li><a href="index.html"> 付款方式</a></li>
+                <li><a href="category.html"> 支付方式</a></li>
+                <li><a href="category2.html"> 常见支付问题</a></li>
+                <li><a href="sub-category.html"> 发票制度说明</a></li>
+              </ul>
+            </div>
+            <div style="clear:both" class="hide visible-xs"></div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+              <h3> 付款方式</h3>
+              <ul>
+                <li><a href="product-details.html"> 支付方式</a></li>
+                <li><a href="product-details-style2.html"> 常见支付问题</a></li>
+                <li><a href="cart.html"> 发票制度说明</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+              <h3> 售后服务</h3>
+              <ul>
+                <li><a href="account-1.html"> 配送时间及范围</a></li>
+                <li><a href="account.html"> 商品验收与签收</a></li>
+                <li><a href="my-address.html"> 退换货政策</a></li>
+              </ul>
+            </div>
+            <div style="clear:both" class="hide visible-xs"></div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <h3> 帮助中心</h3>
+              <ul>
+                <li><a href="#" title="用户注册"> 关于我们</a></li>
+                <li><a href="" title="商品验收与签收"> 联系我们</a></li>
+                <li><a href="3" title="退换货政策"> 常见问题</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- /.row-->
+        </div>
+        <!-- /.container-->
+      </div>
+      <!-- /.footer-->
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="container-inner">
+            <div class="row">
+              <h2 class="text-center mt-5">绘事后素</h2>
+              <div class="vel-copyright hidden-xs hidden-sm col-xs-12 col-xm-6 col-md-6">
+                <div class="row">
+                  <div class="vel-html col-md-12 col-sm-12 col-xs-12">
+                    <div class="block vel-wrap">
+                      <div class="block_content">CopyRight © 2016 绘事后素科技文化有限公司 版权所有</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="copyright col-xs-12 col-xs-6 col-md-6 text-right">
+                <p>京 ICP备001188号 经营许可证编号：京B2-20120</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="assets/js/jquery/jquery-1.10.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/idangerous.swiper-2.1.min.js"></script>
+    <script>
+      var mySwiper = new Swiper('.swiper-container', {
+        pagination: '.box-pagination',
+        keyboardControl: true,
+        paginationClickable: true,
+        slidesPerView: 'auto',
+        autoResize: true,
+        resizeReInit: true,
+      })
+      $('.prevControl').on('click', function (e) {
+        e.preventDefault()
+        mySwiper.swipePrev()
+      })
+      $('.nextControl').on('click', function (e) {
+        e.preventDefault()
+        mySwiper.swipeNext()
+      })
+      
+    </script>
     <script src="/vendor-extra/angular-ui-grid/ui-grid.min.js"></script>
+    <!-- include jqueryCycle plugin-->
+    <script src="assets/js/jquery.cycle2.min.js"></script>
+    <!-- include easing plugin-->
+    <script src="assets/js/jquery.easing.1.3.js"></script>
+    <!-- include  parallax plugin-->
+    <script type="text/javascript" src="assets/js/jquery.parallax-1.1.js"></script>
+    <!-- optionally include helper plugins-->
+    <script type="text/javascript" src="assets/js/helper-plugins/jquery.mousewheel.min.js"></script>
+    <!-- include mCustomScrollbar plugin //Custom Scrollbar-->
+    <script type="text/javascript" src="assets/js/jquery.mCustomScrollbar.js"></script>
+    <!-- include checkRadio plugin //Custom check & Radio-->
+    <script type="text/javascript" src="assets/js/ion-checkRadio/ion.checkRadio.min.js"></script>
+    <!-- include grid.js // for equal Div height-->
+    <script src="assets/js/grids.js"></script>
+    <script src="assets/js/login.js"></script>
+    <!-- include carousel slider plugin-->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- jQuery minimalect // custom select-->
+    <script src="assets/js/jquery.minimalect.min.js"></script>
+    <!-- include touchspin.js // touch friendly input spinner component-->
+    <script src="assets/js/bootstrap.touchspin.js"></script>
+    <!-- include custom script for only homepage-->
+    <script src="assets/js/home.js"></script>
+    <!-- include custom script for site-->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/leon.js"></script>
     <script src="/assets/js/app.js"></script>
   </body>
 </html>
