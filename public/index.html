@@ -14,7 +14,7 @@
   </head>
   <body ng-app="hshs" ng-cloak="ng-cloak">
     <header>
-      <nav role="navigation" class="navbar navbar-tshop navbar-fixed-top megamenu">
+      <nav role="navigation" ng-controller="productsCtrl" class="navbar navbar-tshop navbar-fixed-top megamenu">
         <div class="navbar-top">
           <div class="container">
             <div class="row">
@@ -57,83 +57,13 @@
               <div class="w100 miniCartTable scroll-pane">
                 <table>
                   <tbody>
-                    <tr class="miniCartProduct">
+                    <tr ng-repeat="product in products | limitTo:maxSize" class="miniCartProduct">
                       <td style="20%" class="miniCartProductThumb">
-                        <div><a href="product-details.html"><img src="images/product/3.jpg" alt="img"/></a></div>
+                        <div><a href="product-details.html"><img data-src="holder.js/50x67"/></a></div>
                       </td>
                       <td style="40%">
                         <div class="miniCartDescription">
-                          <h4><a href="product-details.html"> TSHOP T shirt Black</a></h4><span class="size"> 12 x 1.5 L</span>
-                          <div class="price"><span> $8.80</span></div>
-                        </div>
-                      </td>
-                      <td style="10%" class="miniCartQuantity"><a> X 1</a></td>
-                      <td style="15%" class="miniCartSubtotal"><span> $8.80</span></td>
-                      <td style="5%" class="delete"><a> x</a></td>
-                    </tr>
-                    <tr class="miniCartProduct">
-                      <td style="20%" class="miniCartProductThumb">
-                        <div><a href="product-details.html"><img src="images/product/2.jpg" alt="img"/></a></div>
-                      </td>
-                      <td style="40%">
-                        <div class="miniCartDescription">
-                          <h4><a href="product-details.html"> TSHOP T shirt Black</a></h4><span class="size"> 12 x 1.5 L</span>
-                          <div class="price"><span> $8.80</span></div>
-                        </div>
-                      </td>
-                      <td style="10%" class="miniCartQuantity"><a> X 1</a></td>
-                      <td style="15%" class="miniCartSubtotal"><span> $8.80</span></td>
-                      <td style="5%" class="delete"><a> x</a></td>
-                    </tr>
-                    <tr class="miniCartProduct">
-                      <td style="20%" class="miniCartProductThumb">
-                        <div><a href="product-details.html"><img src="images/product/5.jpg" alt="img"/></a></div>
-                      </td>
-                      <td style="40%">
-                        <div class="miniCartDescription">
-                          <h4><a href="product-details.html"> TSHOP T shirt Black</a></h4><span class="size"> 12 x 1.5 L</span>
-                          <div class="price"><span> $8.80</span></div>
-                        </div>
-                      </td>
-                      <td style="10%" class="miniCartQuantity"><a> X 1</a></td>
-                      <td style="15%" class="miniCartSubtotal"><span> $8.80</span></td>
-                      <td style="5%" class="delete"><a> x</a></td>
-                    </tr>
-                    <tr class="miniCartProduct">
-                      <td style="20%" class="miniCartProductThumb">
-                        <div><a href="product-details.html"><img src="images/product/3.jpg" alt="img"/></a></div>
-                      </td>
-                      <td style="40%">
-                        <div class="miniCartDescription">
-                          <h4><a href="product-details.html"> TSHOP T shirt Black</a></h4><span class="size"> 12 x 1.5 L</span>
-                          <div class="price"><span> $8.80</span></div>
-                        </div>
-                      </td>
-                      <td style="10%" class="miniCartQuantity"><a> X 1</a></td>
-                      <td style="15%" class="miniCartSubtotal"><span> $8.80</span></td>
-                      <td style="5%" class="delete"><a> x</a></td>
-                    </tr>
-                    <tr class="miniCartProduct">
-                      <td style="20%" class="miniCartProductThumb">
-                        <div><a href="product-details.html"><img src="images/product/3.jpg" alt="img"/></a></div>
-                      </td>
-                      <td style="40%">
-                        <div class="miniCartDescription">
-                          <h4><a href="product-details.html"> TSHOP T shirt Black</a></h4><span class="size"> 12 x 1.5 L</span>
-                          <div class="price"><span> $8.80</span></div>
-                        </div>
-                      </td>
-                      <td style="10%" class="miniCartQuantity"><a> X 1</a></td>
-                      <td style="15%" class="miniCartSubtotal"><span> $8.80</span></td>
-                      <td style="5%" class="delete"><a> x</a></td>
-                    </tr>
-                    <tr class="miniCartProduct">
-                      <td style="20%" class="miniCartProductThumb">
-                        <div><a href="product-details.html"><img src="images/product/4.jpg" alt="img"/></a></div>
-                      </td>
-                      <td style="40%">
-                        <div class="miniCartDescription">
-                          <h4><a href="product-details.html"> TSHOP T shirt Black</a></h4><span class="size"> 12 x 1.5 L</span>
+                          <h4><a href="product-details.html"> {{product.category}}</a></h4><span class="size"> 12 x 1.5 L</span>
                           <div class="price"><span> $8.80</span></div>
                         </div>
                       </td>
@@ -168,24 +98,14 @@
                               <p>女装</p>
                             </div>
                             <div class="col-sm-6 text-right">
-                              <p><a href="#"> More ></a></p>
+                              <p><a href="#"> More</a></p>
                             </div>
                           </div>
                           <div class="row">
-                            <ul class="col-lg-4 col-sm-4 col-md-4 col-xs-6">
-                              <li class="no-margin productPopItem"><a href="product-details.html"><img src="images/site/g4.jpg" alt="img" class="img-responsive"/></a><a href="product-details.html">
-                                  Eodem modo
-                                  typi<br/><span> ￥60</span></a></li>
-                            </ul>
-                            <ul class="col-lg-4 col-sm-4 col-md-4 col-xs-6">
-                              <li class="no-margin productPopItem"><a href="product-details.html"><img src="images/site/g4.jpg" alt="img" class="img-responsive"/></a><a href="product-details.html">
-                                  Eodem modo
-                                  typi<br/><span> ￥60</span></a></li>
-                            </ul>
-                            <ul class="col-lg-4 col-sm-4 col-md-4 col-xs-6">
-                              <li class="no-margin productPopItem"><a href="product-details.html"><img src="images/site/g4.jpg" alt="img" class="img-responsive"/></a><a href="product-details.html">
-                                  Eodem modo
-                                  typi<br/><span> ￥60</span></a></li>
+                            <ul ng-repeat="product in products | limitTo:threeItem" class="col-lg-4 col-sm-4 col-md-4 col-xs-6">
+                              <li class="no-margin productPopItem"><a href="product-details.html"><img data-src="holder.js/140x220" class="img-responsive"/></a><a href="product-details.html">
+                                  {{product.category}}
+                                  {{product.designer}}<br/><span> {{product.price}}</span></a></li>
                             </ul>
                           </div>
                         </div>
@@ -201,20 +121,10 @@
                             </div>
                           </div>
                           <div class="row">
-                            <ul class="col-lg-4 col-sm-4 col-md-4 col-xs-6">
-                              <li class="no-margin productPopItem"><a href="product-details.html"><img src="images/site/g4.jpg" alt="img" class="img-responsive"/></a><a href="product-details.html">
-                                  Eodem modo
-                                  typi<br/><span> ￥60</span></a></li>
-                            </ul>
-                            <ul class="col-lg-4 col-sm-4 col-md-4 col-xs-6">
-                              <li class="no-margin productPopItem"><a href="product-details.html"><img src="images/site/g4.jpg" alt="img" class="img-responsive"/></a><a href="product-details.html">
-                                  Eodem modo
-                                  typi<br/><span> ￥60</span></a></li>
-                            </ul>
-                            <ul class="col-lg-4 col-sm-4 col-md-4 col-xs-6">
-                              <li class="no-margin productPopItem"><a href="product-details.html"><img src="images/site/g4.jpg" alt="img" class="img-responsive"/></a><a href="product-details.html">
-                                  Eodem modo
-                                  typi<br/><span> ￥60</span></a></li>
+                            <ul ng-repeat="product in products | limitTo:threeItem" class="col-lg-4 col-sm-4 col-md-4 col-xs-6">
+                              <li class="no-margin productPopItem"><a href="product-details.html"><img data-src="holder.js/140x220" class="img-responsive"/></a><a href="product-details.html">
+                                  {{product.category}}
+                                  {{product.designer}}<br/><span> {{product.price}}</span></a></li>
                             </ul>
                           </div>
                         </div>
@@ -231,37 +141,19 @@
                       <li>
                         <p><strong> 设计师</strong></p>
                       </li>
-                      <li><a href="#"> Kameez</a></li>
-                      <li><a href="#"> Tops</a></li>
-                      <li><a href="#"> Shoes</a></li>
-                      <li><a href="#"> T shirt</a></li>
-                      <li><a href="#"> TSHOP</a></li>
-                      <li><a href="#"> Party Dress</a></li>
-                      <li><a href="#"> Women Fragrances</a></li>
+                      <li ng-repeat="product in products | limitTo:maxSize"><a href="#"> {{product.designer}}</a></li>
                     </ul>
                     <ul class="col-lg-3 col-sm-3 col-md-3 unstyled">
                       <li>
                         <p><strong> 服装</strong></p>
                       </li>
-                      <li><a href="#"> Panjabi</a></li>
-                      <li><a href="#"> Male Fragrances</a></li>
-                      <li><a href="#"> Scarf</a></li>
-                      <li><a href="#"> Sandal</a></li>
-                      <li><a href="#"> Underwear</a></li>
-                      <li><a href="#"> Winter Collection</a></li>
-                      <li><a href="#"> Men Accessories</a></li>
+                      <li ng-repeat="product in products | limitTo:maxSize"><a href="#"> {{product.designer}}</a></li>
                     </ul>
                     <ul class="col-lg-3 col-sm-3 col-md-3 unstyled">
                       <li>
                         <p><strong> 配件</strong></p>
                       </li>
-                      <li><a href="#"> Diesel</a></li>
-                      <li><a href="#"> Farah</a></li>
-                      <li><a href="#"> G-Star RAW</a></li>
-                      <li><a href="#"> Lyle & Scott</a></li>
-                      <li><a href="#"> Pretty Green</a></li>
-                      <li><a href="#"> TSHOP</a></li>
-                      <li><a href="#"> TANJIM</a></li>
+                      <li ng-repeat="product in products | limitTo:maxSize"><a href="#"> {{product.designer}}</a></li>
                     </ul>
                     <div class="col-lg-3 col-sm-3 col-md-3 col-xs-6">
                       <div class="padding-left-right-30">
@@ -270,7 +162,7 @@
                           typi
                         </div>
                         <div>设计师</div>
-                        <div>$60</div><a href="product-details.html"><img src="images/site/g4.jpg" alt="img" class="img-responsive"/></a>
+                        <div>$60</div><a href="product-details.html"><img data-src="holder.js/140x220" class="img-responsive"/></a>
                       </div>
                     </div>
                   </li>
@@ -284,46 +176,25 @@
                       <li>
                         <p><strong> 设计师</strong></p>
                       </li>
-                      <li><a href="#"> Kameez</a></li>
-                      <li><a href="#"> Tops</a></li>
-                      <li><a href="#"> Shoes</a></li>
-                      <li><a href="#"> T shirt</a></li>
-                      <li><a href="#"> TSHOP</a></li>
-                      <li><a href="#"> Party Dress</a></li>
-                      <li><a href="#"> Women Fragrances</a></li>
+                      <li ng-repeat="product in products | limitTo:maxSize"><a href="#"> {{product.designer}}</a></li>
                     </ul>
                     <ul class="col-lg-3 col-sm-3 col-md-3 unstyled">
                       <li>
                         <p><strong> 服装</strong></p>
                       </li>
-                      <li><a href="#"> Panjabi</a></li>
-                      <li><a href="#"> Male Fragrances</a></li>
-                      <li><a href="#"> Scarf</a></li>
-                      <li><a href="#"> Sandal</a></li>
-                      <li><a href="#"> Underwear</a></li>
-                      <li><a href="#"> Winter Collection</a></li>
-                      <li><a href="#"> Men Accessories</a></li>
+                      <li ng-repeat="product in products | limitTo:maxSize"><a href="#"> {{product.designer}}</a></li>
                     </ul>
                     <ul class="col-lg-3 col-sm-3 col-md-3 unstyled">
                       <li>
                         <p><strong> 配件</strong></p>
                       </li>
-                      <li><a href="#"> Diesel</a></li>
-                      <li><a href="#"> Farah</a></li>
-                      <li><a href="#"> G-Star RAW</a></li>
-                      <li><a href="#"> Lyle & Scott</a></li>
-                      <li><a href="#"> Pretty Green</a></li>
-                      <li><a href="#"> TSHOP</a></li>
-                      <li><a href="#"> TANJIM</a></li>
+                      <li ng-repeat="product in products | limitTo:maxSize"><a href="#"> {{product.designer}}</a></li>
                     </ul>
                     <div class="col-lg-3 col-sm-3 col-md-3 col-xs-6">
-                      <div class="padding-left-right-30">
-                        <div href="product-details.html">
-                          Eodem modo
-                          typi
-                        </div>
-                        <div>设计师</div>
-                        <div>$60</div><a href="product-details.html"><img src="images/site/g4.jpg" alt="img" class="img-responsive"/></a>
+                      <div ng-repeat="product in products | limitTo:oneItem" class="padding-left-right-30">
+                        <div href="product-details.html">{{product.category}}</div>
+                        <div>{{product.designer}}</div>
+                        <div>{{product.price}}</div><a href="product-details.html"><img data-src="holder.js/140x220" class="img-responsive"/></a>
                       </div>
                     </div>
                   </li>
@@ -347,36 +218,19 @@
                             <div class="col-sm-6">
                               <h5 class="text-center mt-10 mb-10">服装</h5>
                               <ul class="col-lg-6 col-sm-6 col-md-6 text-center">
-                                <li><a href="#"> 上衣</a></li>
-                                <li><a href="#"> 裤子</a></li>
-                                <li><a href="#"> 裙子</a></li>
-                                <li><a href="#"> T恤</a></li>
-                                <li><a href="#"> 内衣</a></li>
-                                <li><a href="#"> 礼服</a></li>
-                                <li><a href="#"> 内衣</a></li>
+                                <li ng-repeat="product in products | limitTo:maxSize"><a href="#"> {{product.category}}</a></li>
                               </ul>
                               <ul class="col-lg-6 col-sm-6 col-md-6 text-center">
-                                <li><a href="#"> 泳装</a></li>
-                                <li><a href="#"> 牛仔</a></li>
-                                <li><a href="#"> 针织衫</a></li>
-                                <li><a href="#"> 晚礼服</a></li>
-                                <li><a href="#"> 风衣</a></li>
-                                <li><a href="#"> 其他</a></li>
+                                <li ng-repeat="product in products | limitTo:maxSize"><a href="#"> {{product.category}}</a></li>
                               </ul>
                             </div>
                             <div class="col-sm-6">
                               <h5 class="text-center mt-10 mb-10">配饰</h5>
                               <ul class="col-lg-6 col-sm-6 col-md-6 text-center">
-                                <li><a href="#"> 眼睛</a></li>
-                                <li><a href="#"> 太阳镜</a></li>
-                                <li><a href="#"> 手套</a></li>
-                                <li><a href="#"> 帽子</a></li>
+                                <li ng-repeat="product in products | limitTo:maxSize"><a href="#"> {{product.category}}</a></li>
                               </ul>
                               <ul class="col-lg-6 col-sm-6 col-md-6 text-center">
-                                <li><a href="#"> 珠宝</a></li>
-                                <li><a href="#"> 手表</a></li>
-                                <li><a href="#"> 胸针</a></li>
-                                <li><a href="#"> 其他</a></li>
+                                <li ng-repeat="product in products | limitTo:maxSize"><a href="#"> {{product.category}}</a></li>
                               </ul>
                             </div>
                           </div>
@@ -396,36 +250,19 @@
                             <div class="col-sm-6">
                               <h5 class="text-center mt-10 mb-10">服装</h5>
                               <ul class="col-lg-6 col-sm-6 col-md-6 text-center">
-                                <li><a href="#"> 上衣</a></li>
-                                <li><a href="#"> 裤子</a></li>
-                                <li><a href="#"> 裙子</a></li>
-                                <li><a href="#"> T恤</a></li>
-                                <li><a href="#"> 内衣</a></li>
-                                <li><a href="#"> 礼服</a></li>
-                                <li><a href="#"> 内衣</a></li>
+                                <li ng-repeat="product in products | limitTo:maxSize"><a href="#"> {{product.category}}</a></li>
                               </ul>
                               <ul class="col-lg-6 col-sm-6 col-md-6 text-center">
-                                <li><a href="#"> 泳装</a></li>
-                                <li><a href="#"> 牛仔</a></li>
-                                <li><a href="#"> 针织衫</a></li>
-                                <li><a href="#"> 晚礼服</a></li>
-                                <li><a href="#"> 风衣</a></li>
-                                <li><a href="#"> 其他</a></li>
+                                <li ng-repeat="product in products | limitTo:maxSize"><a href="#"> {{product.category}}</a></li>
                               </ul>
                             </div>
                             <div class="col-sm-6">
                               <h5 class="text-center mt-10 mb-10">配饰</h5>
                               <ul class="col-lg-6 col-sm-6 col-md-6 text-center">
-                                <li><a href="#"> 眼睛</a></li>
-                                <li><a href="#"> 太阳镜</a></li>
-                                <li><a href="#"> 手套</a></li>
-                                <li><a href="#"> 帽子</a></li>
+                                <li ng-repeat="product in products | limitTo:maxSize"><a href="#"> {{product.category}}</a></li>
                               </ul>
                               <ul class="col-lg-6 col-sm-6 col-md-6 text-center">
-                                <li><a href="#"> 珠宝</a></li>
-                                <li><a href="#"> 手表</a></li>
-                                <li><a href="#"> 胸针</a></li>
-                                <li><a href="#"> 其他</a></li>
+                                <li ng-repeat="product in products | limitTo:maxSize"><a href="#"> {{product.category}}</a></li>
                               </ul>
                             </div>
                           </div>
@@ -443,88 +280,18 @@
                   <div class="w100 miniCartTable scroll-pane">
                     <table>
                       <tbody>
-                        <tr class="miniCartProduct">
+                        <tr ng-repeat="product in products | limitTo:maxSize" class="miniCartProduct">
                           <td style="width:20%" class="miniCartProductThumb">
-                            <div><a href="product-details.html"><img src="images/product/3.jpg" alt="img"/></a></div>
+                            <div><a href="product-details.html"><img data-src="holder.js/50x67"/></a></div>
                           </td>
                           <td style="width:40%">
                             <div class="miniCartDescription">
-                              <h4><a href="product-details.html"> TSHOP Tshirt DO9</a></h4><span class="size"> 12 x 1.5 L</span>
+                              <h4><a href="product-details.html"> {{product.category}}</a></h4><span class="size"> 12 x 1.5 L</span>
                               <div class="price"><span> $22</span></div>
                             </div>
                           </td>
                           <td style="width:10%" class="miniCartQuantity"><a> X 1</a></td>
                           <td style="width:15%" class="miniCartSubtotal"><span> $33</span></td>
-                          <td style="width:5%" class="delete"><a> x</a></td>
-                        </tr>
-                        <tr class="miniCartProduct">
-                          <td style="width:20%" class="miniCartProductThumb">
-                            <div><a href="product-details.html"><img src="images/product/2.jpg" alt="img"/></a></div>
-                          </td>
-                          <td style="width:40%">
-                            <div class="miniCartDescription">
-                              <h4><a href="product-details.html"> TShir TSHOP 09</a></h4><span class="size"> 12 x 1.5 L</span>
-                              <div class="price"><span> $15</span></div>
-                            </div>
-                          </td>
-                          <td style="width:10%" class="miniCartQuantity"><a> X 1</a></td>
-                          <td style="width:15%" class="miniCartSubtotal"><span> $120</span></td>
-                          <td style="width:5%" class="delete"><a> x</a></td>
-                        </tr>
-                        <tr class="miniCartProduct">
-                          <td style="width:20%" class="miniCartProductThumb">
-                            <div><a href="product-details.html"><img src="images/product/5.jpg" alt="img"/></a></div>
-                          </td>
-                          <td style="width:40%">
-                            <div class="miniCartDescription">
-                              <h4><a href="product-details.html"> Tshir 2014</a></h4><span class="size"> 12 x 1.5 L</span>
-                              <div class="price"><span> $30</span></div>
-                            </div>
-                          </td>
-                          <td style="width:10%" class="miniCartQuantity"><a> X 1</a></td>
-                          <td style="width:15%" class="miniCartSubtotal"><span> $80</span></td>
-                          <td style="width:5%" class="delete"><a> x</a></td>
-                        </tr>
-                        <tr class="miniCartProduct">
-                          <td style="width:20%" class="miniCartProductThumb">
-                            <div><a href="product-details.html"><img src="images/product/3.jpg" alt="img"/></a></div>
-                          </td>
-                          <td style="width:40%">
-                            <div class="miniCartDescription">
-                              <h4><a href="product-details.html"> TSHOP T shirt DO20</a></h4><span class="size"> 12 x 1.5 L</span>
-                              <div class="price"><span> $15</span></div>
-                            </div>
-                          </td>
-                          <td style="width:10%" class="miniCartQuantity"><a> X 1</a></td>
-                          <td style="width:15%" class="miniCartSubtotal"><span> $55</span></td>
-                          <td style="width:5%" class="delete"><a> x</a></td>
-                        </tr>
-                        <tr class="miniCartProduct">
-                          <td style="width:20%" class="miniCartProductThumb">
-                            <div><a href="product-details.html"><img src="images/product/4.jpg" alt="img"/></a></div>
-                          </td>
-                          <td style="width:40%">
-                            <div class="miniCartDescription">
-                              <h4><a href="product-details.html"> T shirt Black</a></h4><span class="size"> 12 x 1.5 L</span>
-                              <div class="price"><span> $44</span></div>
-                            </div>
-                          </td>
-                          <td style="width:10%" class="miniCartQuantity"><a> X 1</a></td>
-                          <td style="width:15%" class="miniCartSubtotal"><span> $40</span></td>
-                          <td style="width:5%" class="delete"><a> x</a></td>
-                        </tr>
-                        <tr class="miniCartProduct">
-                          <td style="width:20%" class="miniCartProductThumb">
-                            <div><a href="product-details.html"><img src="images/site/winter.jpg" alt="img"/></a></div>
-                          </td>
-                          <td style="width:40%">
-                            <div class="miniCartDescription">
-                              <h4><a href="product-details.html"> G Star T shirt</a></h4><span class="size"> 12 x 1.5 L</span>
-                              <div class="price"><span> $80</span></div>
-                            </div>
-                          </td>
-                          <td style="width:10%" class="miniCartQuantity"><a> X 1</a></td>
-                          <td style="width:15%" class="miniCartSubtotal"><span> $8.80</span></td>
                           <td style="width:5%" class="delete"><a> x</a></td>
                         </tr>
                       </tbody>
