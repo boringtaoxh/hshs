@@ -3,310 +3,98 @@
 		.row
 			.col-sm-6
 				.image-show-case-wrapper.center-block
-					#imageShowCase.owl-carousel.owl-theme
-						.product-slide
+					ks-swiper-container#imageShowCase.owl-carousel.owl-theme(swiper='swiper', on-ready='onReadySwiper(swiper)',show-nav-buttons="true",loop="true",autoResize="true")
+						ks-swiper-slide.product-slide.swiper-slide(ng-repeat='s in [1,2,3]')
 							a(href='#')
-								img.img-responsive(src='images/1.jpg', alt='img')
-						// /.product-slide
-						.product-slide
-							a(href='#')
-								img.img-responsive(src='images/2.jpg', alt='img')
-						// /.product-slide
-						.product-slide
-							a(href='#')
-								img.img-responsive(src='images/3.jpg', alt='img')
-						// /.product-slide
+								img.img-responsive(data-src='holder.js/555x555?random=yes')
 					// /#imageShowCase
 					div(style='clear:both;')
-					a#ps-next.ps-nav
-						img(src='images/site/arrow-right.png', alt='N E X T')
-					a#ps-prev.ps-nav
-						img(src='images/site/arrow-left.png', alt='P R E V')
 				// /.image-show-case-wrapper
 			.col-sm-6
 				.row.featuredPostContainer
-					.featuredImageLook3
-						.col-md-6.col-sm-6.col-xs-6.col-xs-min-12(style='padding-right: 0;')
+					.featuredImageLook3(style='padding:0 15px;')
+						.col-md-6.col-sm-6.col-xs-6.col-xs-min-12(style='padding:0;' ng-repeat='s in [1,2,3,4]')
 							.inner
 								.box-content-overly.box-content-overly-white
 									.box-text-table
 										.box-text-cell
 											.box-text-cell-inner.dark
-												h1.uppercase 泰晤士风格
+												h1.uppercase hover text
 								// /.box-content-overly
-								.img-title  泰晤士风格
+								.img-title  text
 								a.img-block(href='#')
-									img.img-responsive(src='images/look3/2.jpg', alt='img')
-						.col-md-6.col-sm-6.col-xs-6.col-xs-min-12(style='padding-left: 0;')
-							.inner
-								.box-content-overly.box-content-overly-white
-									.box-text-table
-										.box-text-cell
-											.box-text-cell-inner.dark
-												h1.uppercase  泰晤士风格
-								// /.box-content-overly
-								.img-title  泰晤士风格
-								a.img-block(href='#')
-									img.img-responsive(src='images/look3/1.jpg', alt='img')
-						.col-md-6.col-sm-6.col-xs-6.col-xs-min-12(style='padding-right: 0;')
-							.inner
-								.box-content-overly.box-content-overly-white
-									.box-text-table
-										.box-text-cell
-											.box-text-cell-inner.dark
-												h1.uppercase 泰晤士风格
-								// /.box-content-overly
-								.img-title  泰晤士风格
-								a.img-block(href='#')
-									img.img-responsive(src='images/look3/3.jpg', alt='img')
-						.col-md-6.col-sm-6.col-xs-6.col-xs-min-12(style='padding-left: 0;')
-							.inner
-								.box-content-overly.box-content-overly-white
-									.box-text-table
-										.box-text-cell
-											.box-text-cell-inner.dark
-												h1.uppercase 泰晤士风格
-								// /.box-content-overly
-								.img-title 泰晤士风格
-								a.img-block(href='#')
-									img.img-responsive(src='images/look3/4.jpg', alt='img')
+									img.img-responsive(data-src='holder.js/278x278')
 					// /.featuredImageLook3
 		.mt-30.mb-30.row
 			.col-sm-6(style='padding-right: 0;')
 				a(href='#')
-					img.img-responsive(src='images/site/subcategory.jpg', alt='img')
+					img.img-responsive(data-src='holder.js/570x210?random=yes')
 			.col-sm-6(style='padding-left: 0;')
 				a(href='#')
-					img.img-responsive(src='images/site/category.jpg', alt='img')
-		.row.mb-30
+					img.img-responsive(data-src='holder.js/570x210?random=yes')
+		.row.mb-30(ng-controller='productsCtrl')
 			.col-sm-2
 				a(href='#')
-					img.img-responsive(src='images/featured/3.jpg', alt='img')
+					img.img-responsive(data-src='holder.js/165x124?random=yes')
 				div
 					h3.block-title-5 女装
 					div
 						ul.brand-list
-							li.list-item
-								a(href='#', title='')  Alexander McQueen
-							li.list-item
-								a(href='', title='')  Acne Studios
-							li.list-item
-								a(href='3', title='')  Cedric Jacquemyn
-							li.list-item
-								a(href='3', title='')  Christian Louboutin
-							li.list-item
-								a(href='3', title='')  Alexander Wang
-							li.list-item
-								a(href='3', title='')  Chi ZHANG
+							li.list-item(ng-repeat='designer in designers | limitTo:maxSize' )
+								a(href='#', title='')  {{designer}}
 			.col-sm-4(style='padding-left:5px; padding-right:5px;')
-				img.img-responsive(src='images/33.jpg')
-			.col-sm-6
+				img.img-responsive(data-src='holder.js/380x437?')
+			.col-sm-6(ng-controller='productsCtrl')
 				.row.featuredPostContainer
 					.featuredImageLook3
-						.col-md-4.col-sm-6.col-xs-6.col-xs-min-12
-							.inner(style='height: 240px;')
+						.col-md-4.col-sm-6.col-xs-6.col-xs-min-12(ng-repeat='product in products | limitTo:maxSize' )
+							.inner(style='height:219px;')
 								.box-content-overly.box-content-overly-white
 									.box-text-table
 										.box-text-cell
 											.box-text-cell-inner.dark
-												h5.uppercase Handbags
+												h5.uppercase {{product.category}}
 												a.addtocart  立刻购买
 								// /.box-content-overly
 								a.img-block(href='#')
-									img.img-responsive(src='images/product/2.jpg', alt='img')
-						.col-md-4.col-sm-6.col-xs-6.col-xs-min-12
-							.inner(style='height: 240px;')
-								.box-content-overly.box-content-overly-white
-									.box-text-table
-										.box-text-cell
-											.box-text-cell-inner.dark
-												h5.uppercase  Designers
-												a.addtocart  立刻购买
-								// /.box-content-overly
-								a.img-block(href='#')
-									img.img-responsive(src='images/product/3.jpg', alt='img')
-						.col-md-4.col-sm-6.col-xs-6.col-xs-min-12
-							.inner(style='height: 240px;')
-								.box-content-overly.box-content-overly-white
-									.box-text-table
-										.box-text-cell
-											.box-text-cell-inner.dark
-												h5.uppercase Sale Offers
-												a.addtocart  立刻购买
-								// /.box-content-overly
-								a.img-block(href='#')
-									img.img-responsive(src='images/product/4.jpg', alt='img')
-						.col-md-4.col-sm-6.col-xs-6.col-xs-min-12
-							.inner(style='height: 240px;')
-								.box-content-overly.box-content-overly-white
-									.box-text-table
-										.box-text-cell
-											.box-text-cell-inner.dark
-												h5.uppercase T Collections
-												a.addtocart  立刻购买
-								// /.box-content-overly
-								a.img-block(href='#')
-									img.img-responsive(src='images/product/5.jpg', alt='img')
-						.col-md-4.col-sm-6.col-xs-6.col-xs-min-12
-							.inner(style='height: 240px;')
-								.box-content-overly.box-content-overly-white
-									.box-text-table
-										.box-text-cell
-											.box-text-cell-inner.dark
-												h5.uppercase Latest Trends
-												a.addtocart  立刻购买
-								// /.box-content-overly
-								a.img-block(href='#')
-									img.img-responsive(src='images/product/8.jpg', alt='img')
-						.col-md-4.col-sm-6.col-xs-6.col-xs-min-12
-							.inner(style='height: 260px;')
-								.box-content-overly.box-content-overly-white
-									.box-text-table
-										.box-text-cell
-											.box-text-cell-inner.dark
-												h5.uppercase Dresses
-												a.addtocart  立刻购买
-								// /.box-content-overly
-								a.img-block(href='#')
-									img.img-responsive(src='images/product/9.jpg', alt='img')
+									img.img-responsive(data-src='holder.js/165x219?random=yes')
 					// /.featuredImageLook3
-		.row.mb-30
+		.row.mb-30(ng-controller='productsCtrl')
 			.col-sm-2
 				a(href='#')
-					img.img-responsive(src='images/featured/3.jpg', alt='img')
+					img.img-responsive(data-src='holder.js/165x124')
 				div
 					h3.block-title-5 男装
 					div
 						ul.brand-list
-							li.list-item
-								a(href='#', title='')  Alexander McQueen
-							li.list-item
-								a(href='', title='')  Acne Studios
-							li.list-item
-								a(href='3', title='')  Cedric Jacquemyn
-							li.list-item
-								a(href='3', title='')  Christian Louboutin
-							li.list-item
-								a(href='3', title='')  Alexander Wang
-							li.list-item
-								a(href='3', title='')  Chi ZHANG
+							li.list-item(ng-repeat='designer in designers | limitTo:maxSize' )
+								a(href='#', title='') {{designer}}
 			.col-sm-4(style='padding-left:5px; padding-right:5px;')
-				img.img-responsive(src='images/44.jpg')
-			.col-sm-6
+				img.img-responsive(data-src='holder.js/380x437')
+			.col-sm-6(ng-controller='productsCtrl')
 				.row.featuredPostContainer
 					.featuredImageLook3
-						.col-md-4.col-sm-6.col-xs-6.col-xs-min-12
-							.inner(style='height: 240px;')
+						.col-md-4.col-sm-6.col-xs-6.col-xs-min-12(ng-repeat='product in products | limitTo:maxSize' )
+							.inner(style='height:219px;')
 								.box-content-overly.box-content-overly-white
 									.box-text-table
 										.box-text-cell
 											.box-text-cell-inner.dark
-												h5.uppercase
-													| Handbags
-													a.addtocart  立刻购买
+												h5.uppercase {{product.category}}
+												a.addtocart  立刻购买
 								// /.box-content-overly
 								a.img-block(href='#')
-									img.img-responsive(src='images/product/12.jpg', alt='img')
-						.col-md-4.col-sm-6.col-xs-6.col-xs-min-12
-							.inner(style='height: 240px;')
-								.box-content-overly.box-content-overly-white
-									.box-text-table
-										.box-text-cell
-											.box-text-cell-inner.dark
-												h5.uppercase
-													| Designers
-													a.addtocart  立刻购买
-								// /.box-content-overly
-								a.img-block(href='#')
-									img.img-responsive(src='images/product/24.jpg', alt='img')
-						.col-md-4.col-sm-6.col-xs-6.col-xs-min-12
-							.inner(style='height: 240px;')
-								.box-content-overly.box-content-overly-white
-									.box-text-table
-										.box-text-cell
-											.box-text-cell-inner.dark
-												h5.uppercase
-													| Sale Offers
-													a.addtocart  立刻购买
-								// /.box-content-overly
-								a.img-block(href='#')
-									img.img-responsive(src='images/product/a1.jpg', alt='img')
-						.col-md-4.col-sm-6.col-xs-6.col-xs-min-12
-							.inner(style='height: 240px;')
-								.box-content-overly.box-content-overly-white
-									.box-text-table
-										.box-text-cell
-											.box-text-cell-inner.dark
-												h5.uppercase
-													| T Collections
-													a.addtocart  立刻购买
-								// /.box-content-overly
-								a.img-block(href='#')
-									img.img-responsive(src='images/product/5.jpg', alt='img')
-						.col-md-4.col-sm-6.col-xs-6.col-xs-min-12
-							.inner(style='height: 240px;')
-								.box-content-overly.box-content-overly-white
-									.box-text-table
-										.box-text-cell
-											.box-text-cell-inner.dark
-												h5.uppercase
-													| Latest Trends
-													a.addtocart  立刻购买
-								// /.box-content-overly
-								a.img-block(href='#')
-									img.img-responsive(src='images/product/8.jpg', alt='img')
-						.col-md-4.col-sm-6.col-xs-6.col-xs-min-12
-							.inner(style='height: 260px;')
-								.box-content-overly.box-content-overly-white
-									.box-text-table
-										.box-text-cell
-											.box-text-cell-inner.dark
-												h5.uppercase
-													| Dresses
-													a.addtocart  立刻购买
-								// /.box-content-overly
-								a.img-block(href='#')
-									img.img-responsive(src='images/product/9.jpg', alt='img')
+									img.img-responsive(data-src='holder.js/165x219?random=yes')
 					// /.featuredImageLook3
-		.width100.section-block
+		.width100.section-block(ng-controller='productsCtrl')
 			.row.featuredImgLook2
-				.col-md-3.col-sm-6.col-xs-6
+				.col-md-3.col-sm-6.col-xs-6(ng-repeat='product in products | limitTo:fourItem' )
 					.inner(style='height: 428px;')
 						a.img-link(href='category.html')
-							img.img-responsive(alt='img', src='images/featured/1.jpg')
-						h5.text-left.mt-20 Phillip Lim
+							img.img-responsive(data-src='holder.js/241x180?random=yes')
+						h5.text-left.mt-20 {{product.designer}}
 						p
-							| Phillip Lim是华裔美籍设计师Phillip Lim和他的生意伙伴Wen Zhou于2005年创立的品牌，品牌服装凭低调但不失奢华感的设计荣获各大时装奖项之余，更从中取得良好的口碑。
-						a.btn-link
-							| 查看更多
-							i.fa.fa-long-arrow-right
-				.col-md-3.col-sm-6.col-xs-6
-					.inner(style='height: 428px;')
-						a.img-link(href='category.html')
-							img.img-responsive(alt='img', src='images/featured/2.jpg')
-						h5.text-left.mt-20  demonstraverunt lectores
-						p
-							| Phillip Lim是华裔美籍设计师Phillip Lim和他的生意伙伴Wen Zhou于2005年创立的品牌，品牌服装凭低调但不失奢华感的设计荣获各大时装奖项之余，更从中取得良好的口碑。
-						a.btn-link
-							| 查看更多
-							i.fa.fa-long-arrow-right
-				.col-md-3.col-sm-6.col-xs-6
-					.inner(style='height: 428px;')
-						a.img-link(href='category.html')
-							img.img-responsive(alt='img', src='images/featured/3.jpg')
-						h5.text-left.mt-20  ACNE
-						p
-							| Phillip Lim是华裔美籍设计师Phillip Lim和他的生意伙伴Wen Zhou于2005年创立的品牌，品牌服装凭低调但不失奢华感的设计荣获各大时装奖项之余，更从中取得良好的口碑。
-						a.btn-link
-							| 查看更多
-							i.fa.fa-long-arrow-right
-				.col-md-3.col-sm-6.col-xs-6
-					.inner(style='height: 428px;')
-						a.img-link(href='category.html')
-							img.img-responsive(alt='img', src='images/featured/4.jpg')
-						h5.text-left.mt-20  demonstraverunt lectores
-						p
-							| Phillip Lim是华裔美籍设计师Phillip Lim和他的生意伙伴Wen Zhou于2005年创立的品牌，品牌服装凭低调但不失奢华感的设计荣获各大时装奖项之余，更从中取得良好的口碑。
+							| {{product.text}}
 						a.btn-link
 							| 查看更多
 							i.fa.fa-long-arrow-right
@@ -314,9 +102,9 @@
 		.mt-30.mb-30.row
 			.col-sm-6(style='padding-right: 0;')
 				a(href='#')
-					img.img-responsive(src='images/site/subcategory.jpg', alt='img')
+					img.img-responsive(data-src='holder.js/570x210?random=yes')
 			.col-sm-6(style='padding-left: 0;')
 				a(href='#')
-					img.img-responsive(src='images/site/category.jpg', alt='img')
+					img.img-responsive(data-src='holder.js/570x210?random=yes')
 
 

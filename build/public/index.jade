@@ -19,24 +19,10 @@ html
         include views/partials/footer
     script(type='text/javascript', src='assets/js/jquery/jquery-1.10.1.min.js')
     script(src='assets/js/bootstrap.min.js')
-    script(src='assets/js/idangerous.swiper-2.1.min.js')
-    script.
-      var mySwiper = new Swiper('.swiper-container', {
-        pagination: '.box-pagination',
-        keyboardControl: true,
-        paginationClickable: true,
-        slidesPerView: 'auto',
-        autoResize: true,
-        resizeReInit: true,
-      })
-      $('.prevControl').on('click', function (e) {
-        e.preventDefault()
-        mySwiper.swipePrev()
-      })
-      $('.nextControl').on('click', function (e) {
-        e.preventDefault()
-        mySwiper.swipeNext()
-      })
+    script(src='assets/js/swiper.js')
+    script(src='assets/js/angular-swiper.js')
+    //script(src='assets/js/idangerous.swiper-2.1.min.js')
+
 
     script(src='/vendor-extra/angular-ui-grid/ui-grid.min.js')
     // include jqueryCycle plugin

@@ -1,4 +1,28 @@
+.swiper-container {
+  height: 555px;
+}
 
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+  background-image: url("../../images/site/arrow-right.png");
+  right: 0;
+  left: auto;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position:center center ;
+  top: 45%;
+}
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+  background-image: url("../../images/site/arrow-left.png");
+  right: auto;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position:center center ;
+  top: 45%;
+}
 .navbar-tshop {
     background: #fff;
     -webkit-box-shadow: 0px 0px 2px #cccccc;
