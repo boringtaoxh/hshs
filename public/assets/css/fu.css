@@ -42,3 +42,35 @@ footer h2 {
 .black {
 	color: #000;
 }
+
+.signUpContent .modal-dialog {
+    max-width: 500px;
+}
+
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+button.close {
+    float: none;
+    position: absolute;
+    right: 5px;
+    z-index: 10;
+}
+
+

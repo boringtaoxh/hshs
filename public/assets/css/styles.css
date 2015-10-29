@@ -4,8 +4,6 @@
 #search_block_top .btn.button-search:before,#search_block_top.style1 .btn.button-search:before{content:"\f002";font-family:FontAwesome;font-size:13px}
 .ac_results li,body{font-weight:400}
 .fa-ul,.footer ul{list-style-type:none}
-.carousel,.icr,.nav,.pagination,.panel-title a{cursor:pointer}
-.minict_wrapper,.minict_wrapper *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box}
 .mfp-arrow,.owl-controls{-webkit-tap-highlight-color:transparent}
 .alpha10{background:#000;background:0 0\9;background:rgba(0,0,0,.1);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#19000000, endColorstr=#19000000);zoom:1}
 .alpha10:nth-child(n){filter:none}
@@ -29,6 +27,7 @@
 .alpha90:nth-child(n){filter:none}
 .ng-cloak,.x-ng-cloak,[data-ng-cloak],[ng-cloak],[ng:cloak],[x-ng-cloak]{display:none!important}
 .container-non-responsive{margin-left:auto;margin-right:auto;padding-left:15px;padding-right:15px;width:1170px}
+.carousel,.nav,.pagination,.panel-title a{cursor:pointer}
 .animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
 .animated.hinge{-webkit-animation-duration:2s;animation-duration:2s}
 @-webkit-keyframes bounce{0%,100%,20%,50%,80%{-webkit-transform:translateY(0);transform:translateY(0)}
@@ -614,12 +613,13 @@ form#searchbox .button.button-small i{margin-right:0}
 .icon-search:before{content:"\f002"}
 .product_list.grid .ajax_block_product .style3 .button-container a .icon{width:14px;height:13px}
 .right-block .price{margin-top:15px}
+.loveit i,.mt-5{margin-top:5px}
 .loveit i,.product_list .old-price{font-size:14px}
 .sp-thumbs{left:0!important}
 .style2 .sp-large{float:right}
 .swatches a{line-height:30px}
 .loveit{color:#999;padding-top:5px;display:inline-block}
-.loveit i{margin-right:8px;margin-top:5px}
+.loveit i{margin-right:8px}
 .loveit:hover{color:#000}
 .panel-group .panel,.panel-heading{border:none}
 .panel-title{border-bottom:1px solid #B7B8B7}
@@ -633,7 +633,6 @@ form#searchbox .button.button-small i{margin-right:0}
 .brand-img{border-radius:50%}
 .comments{color:#BBB;margin-bottom:40px}
 .lightbox a{display:block;float:left;width:70px;margin-right:10px;background:#000}
-.fa,.fa-stack,.icr{display:inline-block}
 .comments .comment-item .rating,.pull-right{float:right}
 .lightbox a:hover img{opacity:.6}
 .comments h3{margin-bottom:20px}
@@ -641,6 +640,24 @@ form#searchbox .button.button-small i{margin-right:0}
 .comments .comment-item .date{opacity:.3;font-size:13px}
 .comments .comment-item .rate-text{float:right;display:inline-block;opacity:.4}
 .user-img{border-radius:180px;width:60px}
+@media all{.featherlight{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:2147483647;text-align:center;white-space:nowrap;cursor:pointer;background:0 0}
+.featherlight:last-of-type{background:rgba(0,0,0,.8)}
+.featherlight:before{content:'';display:inline-block;height:100%;vertical-align:middle;margin-right:-.25em}
+.featherlight .featherlight-content{position:relative;text-align:left;vertical-align:middle;display:inline-block;overflow:auto;padding:25px 25px 0;border-bottom:25px solid transparent;min-width:30%;margin-left:5%;margin-right:5%;max-height:95%;background:#fff;cursor:auto;white-space:normal}
+.featherlight .featherlight-inner{display:block}
+.featherlight .featherlight-close-icon{position:absolute;z-index:9999;top:0;right:0;line-height:25px;width:25px;cursor:pointer;text-align:center;font-family:Arial,sans-serif;background:#fff;background:rgba(255,255,255,.3);color:#000}
+.featherlight .featherlight-image{width:100%}
+.featherlight-iframe .featherlight-content{border-bottom:0;padding:0}
+.featherlight iframe{border:0}
+}
+.fa,.fa-stack,.icr{display:inline-block}
+@media only screen and (max-width:1024px){.featherlight .featherlight-content{margin-left:10px;margin-right:10px;max-height:98%;padding:10px 10px 0;border-bottom:10px solid transparent}
+}
+/*!
+ *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+@font-face{font-family:FontAwesome;src:url(../fonts/fontawesome-webfont.eot?v=4.3.0);src:url(../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0) format('embedded-opentype'),url(../fonts/fontawesome-webfont.woff2?v=4.3.0) format('woff2'),url(../fonts/fontawesome-webfont.woff?v=4.3.0) format('woff'),url(../fonts/fontawesome-webfont.ttf?v=4.3.0) format('truetype'),url(../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular) format('svg');font-weight:400;font-style:normal}
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -1203,14 +1220,13 @@ form#searchbox .button.button-small i{margin-right:0}
 .fa-medium:before{content:"\f23a"}
 .navbar-nav>li.active>a,.navbar-nav>li>a:hover{color:#7f8c8d}
 .megamenu-content ul li{background:0 0}
-.mt-5{margin-top:5px}
 .mb-5{margin-bottom:5px}
 footer h2{padding-bottom:10px}
 .mt-60{margin-top:60px}
 .mb-60{margin-bottom:60px}
 .black{color:#000}
 .icr__checkbox,.icr__radio{background:url(../../images/icr-cloudy-skin.png) no-repeat}
-.icr{font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:15px;margin:0 25px 10px 0;color:#555}
+.icr{font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:15px;margin:0 25px 10px 0;color:#555;cursor:pointer}
 .box-text-cell,.display-table-cell,.mfp-container:before,.mfp-content,.search-close i{vertical-align:middle}
 .icr__text{padding:2px 0 0 22px;display:block}
 .icr__checkbox{width:18px;height:18px;background-position:0 0}
@@ -1320,8 +1336,8 @@ footer h2{padding-bottom:10px}
 .mCS-dark-thin>.mCSB_scrollTools .mCSB_buttonDown{background-position:-80px -20px}
 .mCS-dark-thin>.mCSB_scrollTools .mCSB_buttonLeft{background-position:-80px -40px}
 .mCS-dark-thin>.mCSB_scrollTools .mCSB_buttonRight{background-position:-80px -56px}
-.minict_wrapper{background:#fff;position:relative;box-sizing:border-box}
-.minict_wrapper *{box-sizing:border-box}
+.minict_wrapper{background:#fff;position:relative;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.minict_wrapper *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 .mfp-container,img.mfp-img{-webkit-box-sizing:border-box;-moz-box-sizing:border-box}
 .minict_wrapper.active:after{content:"\25B2"}
 .minict_wrapper input{outline:0;background:0 0;cursor:default;width:100%}

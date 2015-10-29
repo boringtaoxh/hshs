@@ -12,6 +12,7 @@ html
     base(href='/')
   body(ng-app='hshs' ng-cloak)
     header
+      include views/partials/modal
       include views/partials/nav-top
     section
       ui-view
@@ -40,6 +41,7 @@ html
     // include grid.js // for equal Div height
     script(src='assets/js/grids.js')
     script(src='assets/js/login.js')
+    script(src='assets/js/featherlight.min.js')
     // include carousel slider plugin
     script(src='assets/js/owl.carousel.min.js')
     script(src='assets/js/jquery.magnific-popup.min.js')
