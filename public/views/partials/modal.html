@@ -8,15 +8,16 @@
         <h2>登录</h2>
         <form action="">
           <div><i class="fa fa-user"></i>
-            <input type="text" name="" id=""/>
+            <input type="text" name="" id=""/><span id="helpBlock2" class="help-block">提示</span>
           </div>
           <div><i class="fa fa-unlock-alt"></i>
             <input type="text" name="" id=""/>
           </div>
-          <input type="submit" value="登录" class="btn btn-dark"/>
+          <input type="submit" value="登录" class="btn btn-dark"/><a href="#" data-dismiss="modal" aria-label="Close">
+            <input type="submit" value="取消" style="margin:0;" class="btn btn-grey"/></a>
         </form>
-        <div class="clearfix addon"><a href="" class="pull-left">忘记密码</a><span href="" class="pull-right">还没有账号？
-            <button class="btn btn-transparent">免费注册</button></span></div>
+        <div class="clearfix addon"><a href="" class="pull-left">忘记密码</a><a href="#" data-toggle="modal" data-target="#ModalSignup" data-dismiss="modal" aria-label="Close" class="pull-right">还没有账号？
+            <button class="btn btn-transparent">免费注册</button></a></div>
       </div>
     </div>
     <!-- /.modal-content-->
@@ -31,7 +32,7 @@
       <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
       <div id="register-form">
         <div class="form-wrapper"><img src="./images/u486.png" class="img-responsive"/>
-          <h3>注册<span class="pull-right grey">已有账号,<a href="">登录</a></span></h3>
+          <h3>注册<span class="pull-right grey">已有账号,<a href="#" data-toggle="modal" data-target="#ModalLogin" data-dismiss="modal" aria-label="Close">登录</a></span></h3>
           <form action="">
             <div>
               <input type="text" name="" placeholder="请输入用户名" id=""/>
@@ -52,7 +53,8 @@
             <div>
               <input type="text" name="" placeholder="请输入邀请码" id=""/>
             </div>
-            <input type="submit" value="注册" class="btn btn-dark"/>
+            <input type="submit" value="注册" class="btn btn-dark"/><a href="#" data-dismiss="modal" aria-label="Close">
+              <input type="submit" value="取消" style="margin-top:10px;" class="btn btn-grey"/></a>
           </form>
         </div>
         <button title="Close (Esc)" type="button" class="mfp-close">&times;</button>

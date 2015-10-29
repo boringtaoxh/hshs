@@ -9,13 +9,16 @@
             div
               i.fa.fa-user
               input(type='text', name='', id='')
+              span#helpBlock2.help-block 提示
             div
               i.fa.fa-unlock-alt
               input(type='text', name='', id='')
             input.btn.btn-dark(type='submit', value='登录')
+            a(href='#' data-dismiss="modal" aria-label="Close")
+              input.btn.btn-grey(type='submit', value='取消' style="margin:0;")
           .clearfix.addon
             a.pull-left(href='') 忘记密码
-            span.pull-right(href='') 还没有账号？
+            a.pull-right(href='#', data-toggle='modal', data-target='#ModalSignup' data-dismiss="modal" aria-label="Close") 还没有账号？
               button.btn.btn-transparent 免费注册
       // /.modal-content
     // /.modal-dialog
@@ -32,7 +35,7 @@
             | 注册
             span.pull-right.grey
               | 已有账号,
-              a(href='') 登录
+              a(href='#', data-toggle='modal', data-target='#ModalLogin' data-dismiss="modal" aria-label="Close") 登录
           form(action='')
             div
               input(type='text', name='', placeholder='请输入用户名', id='')
@@ -48,6 +51,8 @@
             div
               input(type='text', name='', placeholder='请输入邀请码', id='')
             input.btn.btn-dark(type='submit', value='注册')
+            a(href='#' data-dismiss="modal" aria-label="Close")
+              input.btn.btn-grey(type='submit', value='取消' style="margin-top:10px;")
         button.mfp-close(title='Close (Esc)', type='button') &times;
     // /.modal-content
   // /.modal-dialog

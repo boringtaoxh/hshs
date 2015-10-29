@@ -3,7 +3,7 @@
 		.row
 			.col-sm-6
 				.image-show-case-wrapper.center-block
-					ks-swiper-container#imageShowCase.owl-carousel.owl-theme(swiper='swiper', on-ready='onReadySwiper(swiper)',show-nav-buttons="true",loop="true",autoResize="true")
+					ks-swiper-container#imageShowCase.owl-carousel.owl-theme(swiper='swiper', show-nav-buttons="true",loop="true",autoplay="5000")
 						ks-swiper-slide.product-slide.swiper-slide(ng-repeat='s in [1,2,3]')
 							a(href='#')
 								img.img-responsive(data-src='holder.js/555x555?random=yes')
