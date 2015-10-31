@@ -1,0 +1,55 @@
+#left_column.product-sidebar.column.col-xs-12.col-sm-3(ng-controller='productsCtrl')
+  .panel.panel-default.mb-30
+    .panel-heading
+      h4.title_block
+        a.collapseWill(data-toggle='collapse', href='#collapseBrand')
+          | 设计师
+          span.pull-left
+            i.fa.fa-caret-right
+    #collapseBrand.panel-collapse.collapse.in
+      .panel-body.smoothscroll.maxheight300
+        .block-element(ng-repeat='designer in designers')
+          label
+            input(type='checkbox', name='tour', value='0')
+            | {{designer}}
+  .panel.panel-default.mb-30
+    .panel-heading
+      h4.title_block
+        a.collapseWill(data-toggle='collapse', href='#collapseBrand')
+          | 分类
+          span.pull-left
+            i.fa.fa-caret-right
+    #collapseBrand.panel-collapse.collapse.in
+      .panel-body.smoothscroll.maxheight300
+        .block-element(ng-repeat='category in categories')
+          label
+            input(type='checkbox', name='tour', value='0')
+            | {{category}}
+  .panel.panel-default.mb-30
+    .panel-heading
+      h4.title_block
+        a.collapseWill(data-toggle='collapse', href='#collapseColor')
+          | 颜色
+          span.pull-left
+            i.fa.fa-caret-right
+    #collapseColor.panel-collapse.collapse.in
+      .panel-body.smoothscroll.maxheight300.color-filter
+        .block-element(ng-repeat='color in colors')
+          label
+            input(type='checkbox', name='tour', value='0')
+            small(style='background-color:{{color.value}}')
+            |{{color.name}}
+            span ({{color.quantity}})
+  .panel.panel-default.mb-30
+    .panel-heading
+      h4.title_block
+        a.collapseWill(data-toggle='collapse', href='#collapsePrice')
+          | 价格
+          span.pull-left
+            i.fa.fa-caret-right
+    #collapsePrice.panel-collapse.collapse.in
+      .panel-body.smoothscroll.maxheight300.color-filter
+        .block-element(ng-repeat='pricerange in priceranges')
+          label
+            input(type='checkbox', name='tour', value='0')
+            | {{pricerange}}

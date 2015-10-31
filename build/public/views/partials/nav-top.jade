@@ -63,17 +63,17 @@ nav.navbar.navbar-tshop.navbar-fixed-top.megamenu(role='navigation' ng-controlle
                       a(href='product-details.html')  {{product.category}}
                     span.size  12 x 1.5 L
                     .price
-                      span  $8.80
+                      span  ￥8.80
                 td.miniCartQuantity(style='10%')
                   a  X 1
                 td.miniCartSubtotal(style='15%')
-                  span  $8.80
+                  span  ￥8.80
                 td.delete(style='5%')
                   a  x
         // /.miniCartTable
         .miniCartFooter.miniCartFooterInMobile.text-right
           h3.text-right.subtotal  总共: ￥210
-          a.btn.btn-sm.btn-danger
+          a.btn.btn-sm.btn-danger(style="margin-right:10px;")
             i.fa.fa-shopping-cart
             |  查看购物车
           a.btn.btn-sm.btn-primary  结账
@@ -99,7 +99,7 @@ nav.navbar.navbar-tshop.navbar-fixed-top.megamenu(role='navigation' ng-controlle
                         p 女装
                       .col-sm-6.text-right
                         p
-                          a(href='#')  More
+                          a(href='#')  More >
                     .row
                       ul.col-lg-4.col-sm-4.col-md-4.col-xs-6(ng-repeat='product in products | limitTo:threeItem' )
                         li.no-margin.productPopItem
@@ -154,12 +154,11 @@ nav.navbar.navbar-tshop.navbar-fixed-top.megamenu(role='navigation' ng-controlle
                 li(ng-repeat='product in products | limitTo:maxSize' )
                   a(href='#')  {{product.designer}}
               .col-lg-3.col-sm-3.col-md-3.col-xs-6
-                .padding-left-right-30
+                .padding-left-right-30(ng-repeat='product in products | limitTo:oneItem' )
                   div(href='product-details.html')
-                    | Eodem modo
-                    | typi
-                  div 设计师
-                  div $60
+                    | {{product.category}}
+                  div {{product.designer}}
+                  div {{product.price}}
                   a(href='product-details.html')
                     img.img-responsive(data-src='holder.js/140x220')
         li.dropdown.megamenu-fullwidth
@@ -270,17 +269,17 @@ nav.navbar.navbar-tshop.navbar-fixed-top.megamenu(role='navigation' ng-controlle
                           a(href='product-details.html')  {{product.category}}
                         span.size  12 x 1.5 L
                         .price
-                          span  $22
+                          span  {{product.price}}
                     td.miniCartQuantity(style='width:10%')
                       a  X 1
                     td.miniCartSubtotal(style='width:15%')
-                      span  $33
+                      span  {{product.price}}
                     td.delete(style='width:5%')
                       a  x
             // /.miniCartTable
             .miniCartFooter.text-right
-              h3.text-right.subtotal  总计: $210
-              a.btn.btn-sm.btn-danger
+              h3.text-right.subtotal  总计: ￥210
+              a.btn.btn-sm.btn-danger(style="margin-right:10px;")
                 i.fa.fa-shopping-cart
                 |  查看购物车
               a.btn.btn-sm.btn-primary  结账

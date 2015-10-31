@@ -49,11 +49,42 @@ hshs.controller 'productsCtrl', ($scope) ->
     '￥10000以上'
   ]
   prices = [
-    '34'
-    '23'
-    '123'
-    '54'
-    '56'
+    '￥34'
+    '￥23'
+    '￥123'
+    '￥54'
+    '￥56'
+    '￥43'
+    '￥67'
+    '￥27'
+  ]
+
+  colors = [
+    {
+      value: '#333333'
+      name: 'Black'
+      quantity: '233'
+    }
+    {
+      value: '#1664c4'
+      name: 'Blue'
+      quantity: '13'
+    }
+    {
+      value: '#c00707'
+      name: 'Red'
+      quantity: '83'
+    }
+    {
+      value: '#6fcc14'
+      name: 'Green'
+      quantity: '8'
+    }
+    {
+      value: '#943f00'
+      name: 'Brown'
+      quantity: '53'
+    }
   ]
   texts = [ 'Phillip Lim是华裔美籍设计师Phillip Lim和他的生意伙伴Wen Zhou于2005年创立的品牌，品牌服装凭低调但不失奢华感的设计荣获各大时装奖项之余，更从中取得良好的口碑。' ]
   products = new Array
@@ -73,6 +104,7 @@ hshs.controller 'productsCtrl', ($scope) ->
   $scope.prices = prices
   $scope.priceranges = priceranges
   $scope.products = products
+  $scope.colors = colors
   $scope.texts = texts
   $scope.maxSize = 6
   $scope.fourItem = 4

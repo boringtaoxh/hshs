@@ -1,0 +1,59 @@
+
+<div id="left_column" ng-controller="productsCtrl" class="product-sidebar column col-xs-12 col-sm-3">
+  <div class="panel panel-default mb-30">
+    <div class="panel-heading">
+      <h4 class="title_block"><a data-toggle="collapse" href="#collapseBrand" class="collapseWill">设计师<span class="pull-left"><i class="fa fa-caret-right"></i></span></a></h4>
+    </div>
+    <div id="collapseBrand" class="panel-collapse collapse in">
+      <div class="panel-body smoothscroll maxheight300">
+        <div ng-repeat="designer in designers" class="block-element">
+          <label>
+            <input type="checkbox" name="tour" value="0"/>{{designer}}
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default mb-30">
+    <div class="panel-heading">
+      <h4 class="title_block"><a data-toggle="collapse" href="#collapseBrand" class="collapseWill">分类<span class="pull-left"><i class="fa fa-caret-right"></i></span></a></h4>
+    </div>
+    <div id="collapseBrand" class="panel-collapse collapse in">
+      <div class="panel-body smoothscroll maxheight300">
+        <div ng-repeat="category in categories" class="block-element">
+          <label>
+            <input type="checkbox" name="tour" value="0"/>{{category}}
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default mb-30">
+    <div class="panel-heading">
+      <h4 class="title_block"><a data-toggle="collapse" href="#collapseColor" class="collapseWill">颜色<span class="pull-left"><i class="fa fa-caret-right"></i></span></a></h4>
+    </div>
+    <div id="collapseColor" class="panel-collapse collapse in">
+      <div class="panel-body smoothscroll maxheight300 color-filter">
+        <div ng-repeat="color in colors" class="block-element">
+          <label>
+            <input type="checkbox" name="tour" value="0"/><small style="background-color:{{color.value}}"></small>{{color.name}}<span>({{color.quantity}})</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default mb-30">
+    <div class="panel-heading">
+      <h4 class="title_block"><a data-toggle="collapse" href="#collapsePrice" class="collapseWill">价格<span class="pull-left"><i class="fa fa-caret-right"></i></span></a></h4>
+    </div>
+    <div id="collapsePrice" class="panel-collapse collapse in">
+      <div class="panel-body smoothscroll maxheight300 color-filter">
+        <div ng-repeat="pricerange in priceranges" class="block-element">
+          <label>
+            <input type="checkbox" name="tour" value="0"/>{{pricerange}}
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

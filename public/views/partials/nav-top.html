@@ -49,11 +49,11 @@
                 <td style="40%">
                   <div class="miniCartDescription">
                     <h4><a href="product-details.html"> {{product.category}}</a></h4><span class="size"> 12 x 1.5 L</span>
-                    <div class="price"><span> $8.80</span></div>
+                    <div class="price"><span> ￥8.80</span></div>
                   </div>
                 </td>
                 <td style="10%" class="miniCartQuantity"><a> X 1</a></td>
-                <td style="15%" class="miniCartSubtotal"><span> $8.80</span></td>
+                <td style="15%" class="miniCartSubtotal"><span> ￥8.80</span></td>
                 <td style="5%" class="delete"><a> x</a></td>
               </tr>
             </tbody>
@@ -61,7 +61,7 @@
         </div>
         <!-- /.miniCartTable-->
         <div class="miniCartFooter miniCartFooterInMobile text-right">
-          <h3 class="text-right subtotal"> 总共: ￥210</h3><a class="btn btn-sm btn-danger"><i class="fa fa-shopping-cart"></i> 查看购物车</a><a class="btn btn-sm btn-primary"> 结账</a>
+          <h3 class="text-right subtotal"> 总共: ￥210</h3><a style="margin-right:10px;" class="btn btn-sm btn-danger"><i class="fa fa-shopping-cart"></i> 查看购物车</a><a class="btn btn-sm btn-primary"> 结账</a>
         </div>
         <!-- /.miniCartFooter-->
       </div>
@@ -83,7 +83,7 @@
                         <p>女装</p>
                       </div>
                       <div class="col-sm-6 text-right">
-                        <p><a href="#"> More</a></p>
+                        <p><a href="#"> More ></a></p>
                       </div>
                     </div>
                     <div class="row">
@@ -141,13 +141,10 @@
                 <li ng-repeat="product in products | limitTo:maxSize"><a href="#"> {{product.designer}}</a></li>
               </ul>
               <div class="col-lg-3 col-sm-3 col-md-3 col-xs-6">
-                <div class="padding-left-right-30">
-                  <div href="product-details.html">
-                    Eodem modo
-                    typi
-                  </div>
-                  <div>设计师</div>
-                  <div>$60</div><a href="product-details.html"><img data-src="holder.js/140x220" class="img-responsive"/></a>
+                <div ng-repeat="product in products | limitTo:oneItem" class="padding-left-right-30">
+                  <div href="product-details.html">{{product.category}}</div>
+                  <div>{{product.designer}}</div>
+                  <div>{{product.price}}</div><a href="product-details.html"><img data-src="holder.js/140x220" class="img-responsive"/></a>
                 </div>
               </div>
             </li>
@@ -272,11 +269,11 @@
                     <td style="width:40%">
                       <div class="miniCartDescription">
                         <h4><a href="product-details.html"> {{product.category}}</a></h4><span class="size"> 12 x 1.5 L</span>
-                        <div class="price"><span> $22</span></div>
+                        <div class="price"><span> {{product.price}}</span></div>
                       </div>
                     </td>
                     <td style="width:10%" class="miniCartQuantity"><a> X 1</a></td>
-                    <td style="width:15%" class="miniCartSubtotal"><span> $33</span></td>
+                    <td style="width:15%" class="miniCartSubtotal"><span> {{product.price}}</span></td>
                     <td style="width:5%" class="delete"><a> x</a></td>
                   </tr>
                 </tbody>
@@ -284,7 +281,7 @@
             </div>
             <!-- /.miniCartTable-->
             <div class="miniCartFooter text-right">
-              <h3 class="text-right subtotal"> 总计: $210</h3><a class="btn btn-sm btn-danger"><i class="fa fa-shopping-cart"></i> 查看购物车</a><a class="btn btn-sm btn-primary"> 结账</a>
+              <h3 class="text-right subtotal"> 总计: ￥210</h3><a style="margin-right:10px;" class="btn btn-sm btn-danger"><i class="fa fa-shopping-cart"></i> 查看购物车</a><a class="btn btn-sm btn-primary"> 结账</a>
             </div>
             <!-- /.miniCartFooter-->
           </div>

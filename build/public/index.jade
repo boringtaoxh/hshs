@@ -1,7 +1,7 @@
 html
   head
     meta(charset='UTF-8')
-    meta(name="viewport" content="width=1170")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
     title 绘事后素
     link(rel="stylesheet" href="/assets/css/bootstrap.css")
     link(rel='stylesheet', href='/vendor-extra/angular-ui-grid/ui-grid.min.css')
@@ -13,7 +13,8 @@ html
     base(href='/')
   body(ng-app='hshs' ng-cloak)
     header
-      include views/partials/modal
+      include views/partials/login
+      include views/partials/signup
       include views/partials/nav-top
     section
       ui-view
