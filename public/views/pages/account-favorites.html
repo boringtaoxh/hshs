@@ -1,0 +1,69 @@
+
+<div id="accountfFavorites" ng-controller="productsCtrl" class="container main-container headerOffset globalPaddingBottom">
+  <div class="row">
+    <div id="accountSidebar" class="col-sm-2">
+      <div class="w100 text-center">
+        <table id="cart-summary" class="userTable std table">
+          <tbody>
+            <tr>
+              <td><img data-src="holder.js/70x70?text=myprofile" class="img-responsive avatar"/>
+                <h3>Alexander</h3>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="">我的订单</a></td>
+            </tr>
+            <tr>
+              <td><a href="">我的收藏</a></td>
+            </tr>
+            <tr>
+              <td style="padding-bottom:40px;"><a href="">收货地址</a></td>
+            </tr>
+            <tr>
+              <td><a href="">我的资料</a></td>
+            </tr>
+            <tr>
+              <td><a href="">我的特权</a></td>
+            </tr>
+            <tr>
+              <td><a href="">修改密码</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-sm-10">
+      <ul role="tablist" class="list-inline tab nav nav-tabs">
+        <li role="presentation" class="active"><a href="#goods" role="tab" data-toggle="tab" aria-controls="goods" aria-expanded="true" target="_self">商品</a></li>
+        <li role="presentation"><a href="#designer" role="tab" data-toggle="tab" aria-controls="designer" aria-expanded="true" target="_self">设计师</a></li>
+      </ul>
+      <hr class="nomg"/>
+      <form action="" class="user collect">
+        <div class="tab-content col-sm-12 row">
+          <div id="goods" role="tabpanel" class="text-center tab-pane fade in active col-sm-12 row">
+            <div ng-repeat="product in products" class="col-sm-3">
+              <div class="item-wrapper"><a href="product-details.html"><img data-src="holder.js/206x310?random=yes" class="img-responsive"/></a><span>Product-{{product.id}}</span><br/><a href="product-details.html"> {{product.designer}}</a><br/><span>{{product.price}}</span></div>
+            </div>
+            <div class="col-sm-12 row mb-30 mt-30 text-center">
+              <pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" boundary-links="true" previous-text="‹" next-text="›" first-text="«" last-text="»" class="pagination-sm"></pagination>
+            </div>
+          </div>
+          <div id="designer" role="tabpanel" class="tab-pane fade col-sm-12 row">
+            <div ng-repeat="product in products" class="col-sm-3">
+              <div class="item-wrapper"><a href="product-details.html"><img data-src="holder.js/191x121?random=yes" class="img-responsive"/></a><a href="product-details.html"> {{product.designer}}</a></div>
+            </div>
+            <div class="col-sm-12 row mb-30 mt-30 text-center">
+              <pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" boundary-links="true" previous-text="‹" next-text="›" first-text="«" last-text="»" class="pagination-sm"></pagination>
+            </div>
+          </div>
+        </div>
+      </form>
+      <script>
+        $('.nav-tabs a').click(function (e) {
+          e.preventDefault()
+          $(this).tab('show')
+        })
+      </script>
+    </div>
+  </div>
+</div>

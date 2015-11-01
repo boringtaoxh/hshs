@@ -1,0 +1,42 @@
+#accountVIP.container.main-container.headerOffset.globalPaddingBottom(ng-controller='productsCtrl')
+  .row
+    include ../partials/account-sidebar
+    .col-sm-10
+      ul.list-inline.tab
+        li.active 我的特权
+      hr.nomg
+      form.user(action='')
+        .row
+          .col-sm-12
+            .row
+              label.col-sm-2(for='') 我的等级
+              span.col-sm-8
+                | 金牌会员
+                .col-sm-5.pull-right
+                  span.grey.col-sm-5(style='line-height: 27px;') 已有VIP卡
+                  button.btn.btn-sm.btn-dark VIP激活
+            .row
+              label.col-sm-2(for='') 我的积分
+              span.col-sm-8 2000分
+            .row
+              label.col-sm-2(for='') 享受特权
+              span.col-sm-8.grey
+                | 享受全场免运费服务；
+                br
+                | 可以参与金牌会员级别所能参与的商品拍卖；
+                br
+                | 可享受修改衣服服务。北京客户可享受上门量体服务。
+                br
+                | 不定期举办个别产品针对金牌会员的优惠活动；
+                br
+                |                     享有优先购物权——对国内少见的优秀产品或者其它比较紧俏的产品具有优先购买权。
+            .row
+              .col-sm-2.mb-10 积分明细
+            .row
+              ul.list-form.col-sm-12.mb-10
+                li(ng-repeat='s in [1,2,3,4,5,6]')
+                  span.col-sm-4 2015-09-06 15:12:35
+                  span.col-sm-4 购物消费获得积分
+                  span.col-sm-4 +56
+            .row.mb-30.mt-30.text-center
+              pagination.pagination-sm(total-items='bigTotalItems', ng-model='bigCurrentPage', max-size='maxSize',boundary-links='true', previous-text="‹", next-text="›", first-text="«", last-text="»")

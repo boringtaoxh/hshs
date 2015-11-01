@@ -109,6 +109,7 @@ hshs.controller 'productsCtrl', ($scope) ->
   $scope.maxSize = 6
   $scope.fourItem = 4
   $scope.threeItem = 3
+  $scope.twoItem = 2
   $scope.oneItem = 1
   $scope.bigTotalItems = 175
   $scope.bigCurrentPage = 1

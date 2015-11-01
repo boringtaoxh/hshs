@@ -1,123 +1,103 @@
-.container.main-container.headerOffset.globalPaddingBottom
-    .row
-        .col-lg-12.col-md-12.col-sm-12
-          .cartContent.w100
-            table.cartTable.table-responsive(style='width:100%')
-              tbody
-                tr.CartProduct.cartTableHeader
-                  td.selective.text-left(style='width:6.5%;')
-                    i.unselect
-                    span &#x5168;&#x9009;
-                  td(style='width:22%') &#x5546;&#x54C1;
-                  td(style='width:14.5%') &#x5546;&#x54C1;&#x4FE1;&#x606F;
-                  td(style='width:12.8%') &#x6570;&#x91CF;
-                  td(style='width:15.3%') &#x5355;&#x4EF7;
-                  td(style='width:14.5%') &#x4F18;&#x60E0;
-                  td &#x64CD;&#x4F5C;
-                tr.CartProduct
-                  td.selective
-                    i.select
-                  td.CartProductThumb
-                    a.pull-left(href='product-details.html')
-                      img(src='images/product/a1.jpg', alt='img')
-                    h4.title
-                      a(href='product-details.html') Denim T shirt Black 
-                  td
-                    .CartDescription
-                      span.size &#x5C3A;&#x7801;&#xFF1A;XL
-                  td
-                    input.quanityChooser(type='text', value='2', name='quanityChooser')
-                  td.price &#xFFE5;300
-                  td
-                  td.Delete.op
-                    a.Collect.op
-                      i.glyphicon.glyphicon-star-empty
-                      | &#x6536;&#x85CF;
-                    br
-                    a.Delete.op
-                      i.glyphicon.glyphicon-trash
-                      | &#x5220;&#x9664;
-                tr.CartProduct
-                  td.selective
-                    i.select
-                  td.CartProductThumb
-                    div
-                      a.pull-left(href='product-details.html')
-                        img(src='images/product/a1.jpg', alt='img')
-                      h4.title
-                        a(href='product-details.html') Denim T shirt Black 
-                  td
-                    .CartDescription
-                      span.size &#x5C3A;&#x7801;&#xFF1A;XL
-                  td
-                    input.quanityChooser(type='text', value='2', name='quanityChooser')
-                  td.price &#xFFE5;300
-                  td
-                  td.Delete.op
-                    a.Collect.op
-                      i.glyphicon.glyphicon-star-empty
-                      | &#x6536;&#x85CF;
-                    br
-                    a(title='Delete op')
-                      i.glyphicon.glyphicon-trash
-                      | &#x5220;&#x9664;
-                tr.CartProduct
-                  td.selective
-                    i.unselect
-                  td.CartProductThumb
-                    div
-                      a.pull-left(href='product-details.html')
-                        img(src='images/product/a1.jpg', alt='img')
-                      h4.title
-                        a(href='product-details.html') Denim T shirt Black 
-                  td
-                    .CartDescription
-                      span.size &#x5C3A;&#x7801;&#xFF1A;XL
-                  td
-                    input.quanityChooser(type='text', value='2', name='quanityChooser')
-                  td.price &#xFFE5;300
-                  td
-                  td.Delete.op
-                    a.Collect.op
-                      i.glyphicon.glyphicon-star-empty
-                      | &#x6536;&#x85CF;
-                    br
-                    a(title='Delete op')
-                      i.glyphicon.glyphicon-trash
-                      | &#x5220;&#x9664;
-                tr.compute
-                  td.selective
-                    i.unselect
-                    span &#x5168;&#x9009;
-                  td
-                    a.op &#x5220;&#x9664;&#x9009;&#x4E2D;&#x5546;&#x54C1;
-                    a.op &#x6536;&#x85CF;&#x9009;&#x4E2D;&#x5546;&#x54C1;
-                  td
-                  td
-                  td
-                  td.title.text-right
-                    .total
-                      span 2
-                      | &#x4EF6;&#x5546;&#x54C1; &#x603B;&#x8BA1;&#xFF1A;
-                    .charge &#x4F18;&#x60E0;&#xFF1A;
-                  td.number.text-left
-                    .total &#xFFE5;5800
-                    .charge &#xFFE5;0
-                tr.bottom
-                  td
-                  td
-                  td
-                  td
-                  td
-                  td.title.text-right
-                    h4 &#x603B;&#x8BA1;(&#x514D;&#x8FD0;&#x8D39;)&#xFF1A;
-                  td.number.text-left
-                    h2.highlight &#xFFE5;5,800
-            ul.CartProduct.pager.text-center
-              li.previous
-                a.btn-lg(href='index.html') &#x7EE7;&#x7EED;&#x8D2D;&#x7269
-              li.next
-                a.btn-lg(href='') &#x53BB;&#x7ED3;&#x7B97;
-          // cartContent
-      // /.innerPage
-      div(style='clear:both')
+#cart.container.main-container.headerOffset.globalPaddingBottom(ng-controller='productsCtrl')
+  .row
+    .col-lg-12.col-md-12.col-sm-12
+      .cartContent.w100
+        table.cartTable.table-responsive(style='width:100%')
+          tbody
+            tr.CartProduct.cartTableHeader
+              td.selective.text-left(style='width:6.5%;')
+                i.unselect
+                span 全选
+              td(style='width:22%') 商品
+              td(style='width:14.5%') 商品信息
+              td(style='width:12.8%') 数量
+              td(style='width:15.3%') 单价
+              td(style='width:14.5%') 优惠
+              td 操作
+            tr.CartProduct(ng-repeat='product in products | limitTo:twoItem' )
+              td.selective
+                i.select
+              td.CartProductThumb
+                a.pull-left(href='product-details.html')
+                  img(data-src='holder.js/86x115')
+                h4.title
+                  span.grey {{product.designer}}
+                  br
+                  a(href='product-details.html') Product-{{product.id}}
+              td
+                .CartDescription
+                  span.size 尺码：XL
+              td
+                input.quanityChooser(type='text', value='2', name='quanityChooser')
+              td.price {{product.price}}
+              td
+              td.Delete.op
+                a.Collect.op
+                  i.glyphicon.glyphicon-star-empty
+                  | 收藏
+                br
+                a.Delete.op
+                  i.glyphicon.glyphicon-trash
+                  | 删除
+            tr.CartProduct(ng-repeat='product in products | limitTo:twoItem' )
+              td.selective
+                i.unselect
+              td.CartProductThumb
+                a.pull-left(href='product-details.html')
+                  img(data-src='holder.js/86x115')
+                h4.title
+                  span.grey {{product.designer}}
+                  br
+                  a(href='product-details.html') Product-{{product.id}}
+              td
+                .CartDescription
+                  span.size 尺码：XL
+              td
+                input.quanityChooser(type='text', value='2', name='quanityChooser')
+              td.price {{product.price}}
+              td
+              td.Delete.op
+                a.Collect.op
+                  i.glyphicon.glyphicon-star-empty
+                  | 收藏
+                br
+                a.Delete.op
+                  i.glyphicon.glyphicon-trash
+                  | 删除
+            tr.compute
+              td.selective
+                i.unselect
+                span 全选
+              td
+                a.op 删除选中商品
+                a.op 收藏选中商品
+              td
+              td
+              td
+              td.title.text-right
+                .total
+                  span 2
+                  | 件商品 总计：
+                .charge 优惠：
+              td.number.text-left
+                .total ￥5800
+                .charge ￥0
+            tr.bottom
+              td
+              td
+              td
+              td
+              td
+              td.title.text-right
+                h4 总计(免运费)：
+              td.number.text-left
+                h2.highlight ￥5,800
+        ul.CartProduct.pager.text-center
+          li.previous
+            a.btn-lg(href='index.html') 继续购物
+          li.next
+            a.btn-lg(href='') 去结算
+      // cartContent
+  // /.innerPage
+  div(style='clear:both')
+// main-container

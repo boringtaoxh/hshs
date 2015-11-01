@@ -1,0 +1,71 @@
+
+<div id="accountVIP" ng-controller="productsCtrl" class="container main-container headerOffset globalPaddingBottom">
+  <div class="row">
+    <div id="accountSidebar" class="col-sm-2">
+      <div class="w100 text-center">
+        <table id="cart-summary" class="userTable std table">
+          <tbody>
+            <tr>
+              <td><img data-src="holder.js/70x70?text=myprofile" class="img-responsive avatar"/>
+                <h3>Alexander</h3>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="">我的订单</a></td>
+            </tr>
+            <tr>
+              <td><a href="">我的收藏</a></td>
+            </tr>
+            <tr>
+              <td style="padding-bottom:40px;"><a href="">收货地址</a></td>
+            </tr>
+            <tr>
+              <td><a href="">我的资料</a></td>
+            </tr>
+            <tr>
+              <td><a href="">我的特权</a></td>
+            </tr>
+            <tr>
+              <td><a href="">修改密码</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-sm-10">
+      <ul class="list-inline tab">
+        <li class="active">我的特权</li>
+      </ul>
+      <hr class="nomg"/>
+      <form action="" class="user">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="row">
+              <label for="" class="col-sm-2">我的等级</label><span class="col-sm-8">金牌会员
+                <div class="col-sm-5 pull-right"><span style="line-height: 27px;" class="grey col-sm-5">已有VIP卡</span>
+                  <button class="btn btn-sm btn-dark">VIP激活</button>
+                </div></span>
+            </div>
+            <div class="row">
+              <label for="" class="col-sm-2">我的积分</label><span class="col-sm-8">2000分</span>
+            </div>
+            <div class="row">
+              <label for="" class="col-sm-2">享受特权</label><span class="col-sm-8 grey">享受全场免运费服务；<br/>可以参与金牌会员级别所能参与的商品拍卖；<br/>可享受修改衣服服务。北京客户可享受上门量体服务。<br/>不定期举办个别产品针对金牌会员的优惠活动；<br/>                    享有优先购物权——对国内少见的优秀产品或者其它比较紧俏的产品具有优先购买权。</span>
+            </div>
+            <div class="row">
+              <div class="col-sm-2 mb-10">积分明细</div>
+            </div>
+            <div class="row">
+              <ul class="list-form col-sm-12 mb-10">
+                <li ng-repeat="s in [1,2,3,4,5,6]"><span class="col-sm-4">2015-09-06 15:12:35</span><span class="col-sm-4">购物消费获得积分</span><span class="col-sm-4">+56</span></li>
+              </ul>
+            </div>
+            <div class="row mb-30 mt-30 text-center">
+              <pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" boundary-links="true" previous-text="‹" next-text="›" first-text="«" last-text="»" class="pagination-sm"></pagination>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

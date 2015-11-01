@@ -1,0 +1,37 @@
+#accountfFavorites.container.main-container.headerOffset.globalPaddingBottom(ng-controller='productsCtrl')
+  .row
+    include ../partials/account-sidebar
+    .col-sm-10
+      ul.list-inline.tab.nav.nav-tabs(role="tablist")
+        li.active(role="presentation")
+          a(href="#goods" role="tab" data-toggle="tab" aria-controls="goods" aria-expanded="true" target="_self") 商品
+        li(role="presentation")
+          a(href="#designer" role="tab" data-toggle="tab" aria-controls="designer" aria-expanded="true" target="_self") 设计师
+      hr.nomg
+      form.user.collect(action='')
+        .tab-content.col-sm-12.row
+          #goods.text-center.tab-pane.fade.in.active.col-sm-12.row(role="tabpanel")
+            .col-sm-3(ng-repeat='product in products')
+              .item-wrapper
+                a(href='product-details.html')
+                  img.img-responsive(data-src='holder.js/206x310?random=yes')
+                span Product-{{product.id}}
+                br
+                a(href='product-details.html')  {{product.designer}}
+                br
+                span {{product.price}}
+            .col-sm-12.row.mb-30.mt-30.text-center
+              pagination.pagination-sm(total-items='bigTotalItems', ng-model='bigCurrentPage', max-size='maxSize',boundary-links='true', previous-text="‹", next-text="›", first-text="«", last-text="»")
+          #designer.tab-pane.fade.col-sm-12.row(role="tabpanel")
+            .col-sm-3(ng-repeat='product in products')
+              .item-wrapper
+                a(href='product-details.html')
+                  img.img-responsive(data-src='holder.js/191x121?random=yes')
+                a(href='product-details.html')  {{product.designer}}
+            .col-sm-12.row.mb-30.mt-30.text-center
+              pagination.pagination-sm(total-items='bigTotalItems', ng-model='bigCurrentPage', max-size='maxSize',boundary-links='true', previous-text="‹", next-text="›", first-text="«", last-text="»")
+      script.
+        $('.nav-tabs a').click(function (e) {
+          e.preventDefault()
+          $(this).tab('show')
+        })

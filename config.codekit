@@ -16,28 +16,39 @@
 	"\/build\/public\/app\/app.coffee": {
 		"createSourceMap": 0,
 		"fileType": 32,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/build\/public\/app\/app.coffee",
 		"minifyOutput": 1,
 		"outputAbbreviatedPath": "\/build\/public\/app\/app.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
+		"syntaxCheckerStyle": 0
+		},
+	"\/build\/public\/app\/app.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/build\/public\/app\/app.js",
+		"outputAbbreviatedPath": "\/build\/public\/app\/min\/app-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
 	"\/build\/public\/app\/controllers\/controller.coffee": {
 		"createSourceMap": 0,
 		"fileType": 32,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/build\/public\/app\/controllers\/controller.coffee",
 		"minifyOutput": 1,
 		"outputAbbreviatedPath": "\/build\/public\/app\/controllers\/controller.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
-		"syntaxCheckerStyle": 1
+		"syntaxCheckerStyle": 0
 		},
 	"\/build\/public\/assets\/css\/alpha.css": {
 		"fileType": 16,
@@ -84,83 +95,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/build\/public\/assets\/css\/grabbing.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 116,
-		"inputAbbreviatedPath": "\/build\/public\/assets\/css\/grabbing.png",
-		"outputAbbreviatedPath": "\/build\/public\/assets\/css\/grabbing.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/build\/public\/assets\/css\/img\/arrow.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 337,
-		"inputAbbreviatedPath": "\/build\/public\/assets\/css\/img\/arrow.png",
-		"outputAbbreviatedPath": "\/build\/public\/assets\/css\/img\/arrow.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/build\/public\/assets\/css\/img\/down.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 625,
-		"inputAbbreviatedPath": "\/build\/public\/assets\/css\/img\/down.png",
-		"outputAbbreviatedPath": "\/build\/public\/assets\/css\/img\/down.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/build\/public\/assets\/css\/img\/minus.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 284,
-		"inputAbbreviatedPath": "\/build\/public\/assets\/css\/img\/minus.png",
-		"outputAbbreviatedPath": "\/build\/public\/assets\/css\/img\/minus.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/build\/public\/assets\/css\/img\/plus.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 563,
-		"inputAbbreviatedPath": "\/build\/public\/assets\/css\/img\/plus.png",
-		"outputAbbreviatedPath": "\/build\/public\/assets\/css\/img\/plus.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/build\/public\/assets\/css\/img\/sorting_sprite.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 282,
-		"inputAbbreviatedPath": "\/build\/public\/assets\/css\/img\/sorting_sprite.png",
-		"outputAbbreviatedPath": "\/build\/public\/assets\/css\/img\/sorting_sprite.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/build\/public\/assets\/css\/img\/up.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 608,
-		"inputAbbreviatedPath": "\/build\/public\/assets\/css\/img\/up.png",
-		"outputAbbreviatedPath": "\/build\/public\/assets\/css\/img\/up.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/build\/public\/assets\/css\/ion.checkRadio.cloudy.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -206,26 +140,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/build\/public\/assets\/css\/leon.less": {
-		"allowInsecureImports": 0,
-		"createSourceMap": 0,
-		"disableJavascript": 0,
-		"fileType": 1,
-		"ieCompatibility": 1,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/build\/public\/assets\/css\/leon.less",
-		"outputAbbreviatedPath": "\/build\/public\/assets\/css\/leon.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"relativeURLS": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"strictImports": 0,
-		"strictMath": 0,
-		"strictUnits": 0
-		},
 	"\/build\/public\/assets\/css\/magnific-popup.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -234,17 +148,6 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
-		},
-	"\/build\/public\/assets\/css\/mCSB_buttons.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1394,
-		"inputAbbreviatedPath": "\/build\/public\/assets\/css\/mCSB_buttons.png",
-		"outputAbbreviatedPath": "\/build\/public\/assets\/css\/mCSB_buttons.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
 		},
 	"\/build\/public\/assets\/css\/owl.carousel.css": {
 		"fileType": 16,
@@ -260,6 +163,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/build\/public\/assets\/css\/owl.theme.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/build\/public\/assets\/css\/product_list.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/build\/public\/assets\/css\/product_list.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -295,8 +207,8 @@
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"fileType": 8,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"importCSS": 0,
 		"inputAbbreviatedPath": "\/build\/public\/assets\/css\/style.styl",
 		"outputAbbreviatedPath": "\/build\/public\/assets\/css\/style.css",
@@ -319,12 +231,23 @@
 	"\/build\/public\/index.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/build\/public\/index.jade",
 		"outputAbbreviatedPath": "\/build\/public\/index.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
+	"\/build\/public\/views\/pages\/account-profile.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/build\/public\/views\/pages\/account-profile.jade",
+		"outputAbbreviatedPath": "\/public\/views\/pages\/account-profile.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 0
 		},
 	"\/build\/public\/views\/pages\/cart.jade": {
@@ -333,9 +256,9 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/build\/public\/views\/pages\/cart.jade",
-		"outputAbbreviatedPath": "\/build\/public\/views\/pages\/cart.html",
+		"outputAbbreviatedPath": "\/public\/views\/pages\/cart.html",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 0
 		},
 	"\/build\/public\/views\/pages\/home.jade": {
@@ -344,9 +267,9 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/build\/public\/views\/pages\/home.jade",
-		"outputAbbreviatedPath": "\/build\/public\/views\/pages\/home.html",
+		"outputAbbreviatedPath": "\/public\/views\/pages\/home.html",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 0
 		},
 	"\/build\/public\/views\/pages\/product.jade": {
@@ -355,9 +278,9 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/build\/public\/views\/pages\/product.jade",
-		"outputAbbreviatedPath": "\/build\/public\/views\/pages\/product.html",
+		"outputAbbreviatedPath": "\/public\/views\/pages\/product.html",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 0
 		},
 	"\/build\/public\/views\/pages\/products.jade": {
@@ -366,9 +289,9 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/build\/public\/views\/pages\/products.jade",
-		"outputAbbreviatedPath": "\/build\/public\/views\/pages\/products.html",
+		"outputAbbreviatedPath": "\/public\/views\/pages\/products.html",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 0
 		},
 	"\/build\/public\/views\/partials\/footer.jade": {
@@ -382,13 +305,13 @@
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 0
 		},
-	"\/build\/public\/views\/partials\/modal.jade": {
+	"\/build\/public\/views\/partials\/login.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/build\/public\/views\/partials\/modal.jade",
-		"outputAbbreviatedPath": "\/public\/views\/partials\/modal.html",
+		"ignore": 0,
+		"ignoreWasSetByUser": 1,
+		"inputAbbreviatedPath": "\/build\/public\/views\/partials\/login.jade",
+		"outputAbbreviatedPath": "\/public\/views\/partials\/login.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 0
@@ -400,6 +323,28 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/build\/public\/views\/partials\/nav-top.jade",
 		"outputAbbreviatedPath": "\/public\/views\/partials\/nav-top.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 0
+		},
+	"\/build\/public\/views\/partials\/product-sidebar.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 0,
+		"ignoreWasSetByUser": 1,
+		"inputAbbreviatedPath": "\/build\/public\/views\/partials\/product-sidebar.jade",
+		"outputAbbreviatedPath": "\/public\/views\/partials\/product-sidebar.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 0
+		},
+	"\/build\/public\/views\/partials\/signup.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 0,
+		"ignoreWasSetByUser": 1,
+		"inputAbbreviatedPath": "\/build\/public\/views\/partials\/signup.jade",
+		"outputAbbreviatedPath": "\/public\/views\/partials\/signup.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 0
@@ -453,15 +398,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/public\/assets\/css\/style.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/public\/assets\/css\/style.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/public\/assets\/css\/styles.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -484,14 +420,14 @@
 		},
 	"\/public\/assets\/js\/app.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/public\/assets\/js\/app.js",
 		"outputAbbreviatedPath": "\/public\/assets\/js\/min\/app-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
+		"syntaxCheckerStyle": 0
 		},
 	"\/public\/assets\/js\/bootstrap.min.js": {
 		"fileType": 64,
@@ -895,6 +831,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/public\/assets\/js\/leon.js",
 		"outputAbbreviatedPath": "\/public\/assets\/js\/min\/leon-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/public\/assets\/js\/min\/app-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/assets\/js\/min\/app-min.js",
+		"outputAbbreviatedPath": "\/public\/assets\/js\/min\/min\/app-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -2988,9 +2935,18 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/public\/views\/pages\/account-profile.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/views\/pages\/account-profile.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/public\/views\/pages\/cart.html": {
 		"fileType": 8192,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/public\/views\/pages\/cart.html",
 		"outputAbbreviatedPath": "No Output Path",
@@ -2999,7 +2955,7 @@
 		},
 	"\/public\/views\/pages\/home.html": {
 		"fileType": 8192,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/public\/views\/pages\/home.html",
 		"outputAbbreviatedPath": "No Output Path",
@@ -3008,7 +2964,7 @@
 		},
 	"\/public\/views\/pages\/product.html": {
 		"fileType": 8192,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/public\/views\/pages\/product.html",
 		"outputAbbreviatedPath": "No Output Path",
@@ -3017,7 +2973,7 @@
 		},
 	"\/public\/views\/pages\/products.html": {
 		"fileType": 8192,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/public\/views\/pages\/products.html",
 		"outputAbbreviatedPath": "No Output Path",
@@ -3033,20 +2989,11 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/public\/views\/partials\/modal.html": {
+	"\/public\/views\/partials\/login.html": {
 		"fileType": 8192,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/public\/views\/partials\/modal.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/public\/views\/partials\/nav-top copy.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/public\/views\/partials\/nav-top copy.html",
+		"inputAbbreviatedPath": "\/public\/views\/partials\/login.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -3056,6 +3003,24 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/public\/views\/partials\/nav-top.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/public\/views\/partials\/product-sidebar.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/views\/partials\/product-sidebar.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/public\/views\/partials\/signup.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/views\/partials\/signup.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

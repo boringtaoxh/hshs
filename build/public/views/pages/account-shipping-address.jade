@@ -1,0 +1,70 @@
+#accountShipping.container.main-container.headerOffset.globalPaddingBottom
+  .row
+    include ../partials/account-sidebar
+    .col-sm-10
+      ul.list-inline.tab
+        li.active 收货地址
+      hr.nomg
+      form.user(action='')
+        h4.title 新增收货地址
+        .row
+          .col-sm-10
+            .clearfix
+              label(for='') 收货人姓名
+              span
+                input(placeholder=' 请填写真实的收货人姓名', type='text')
+            .clearfix
+              label(for='') 手机号码
+              input(placeholder='请填写收货人的手机号码', type='text')
+            .clearfix
+              label(for='') 所在地区
+              span
+                select(name='', id='')
+                  option(value='') 黑龙江
+                  option(value='') 北京
+                  option(value='') 江苏
+                  option(value='') 上海
+                select(name='', id='')
+                  option(value='') 无锡
+                  option(value='') 宜兴
+                  option(value='') 江阴
+                select(name='', id='')
+                  option(value='') 松江
+                  option(value='') 杨浦
+                  option(value='') 宝山
+                  option(value='') 虹口
+            .clearfix
+              label(for='') 详细地址
+              span
+                input(placeholder='请输入您的详细地址', type='text')
+            .clearfix.selective
+              i.unselect
+              span 设为默认收货地址
+            div
+              input.btn.btn-lg.btn-dark(type='submit', value='保存地址')
+            div
+              table.table-normal.table-responsive.w100.text-center
+                thead
+                  tr
+                    th(width='10%') 收货人
+                    th(width='40%') 详细地址
+                    th(width='15%') 手机
+                    th(width='15%') 操作
+                    th(width='20%')
+                tbody
+                  tr
+                    td 张三
+                    td 北京市海淀区北下关街道交大知行大厦9层
+                    td 1860273390
+                    td
+                      a(href='') 修改 | 
+                      a(href='') 删除
+                    td 默认地址
+                  tr
+                    td 张三
+                    td 北京市海淀区北下关街道交大知行大厦9层
+                    td 1860273390
+                    td
+                      a(href='') 修改 | 
+                      a(href='') 删除
+                    td

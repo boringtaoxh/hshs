@@ -1,0 +1,108 @@
+#accountProfile.container.main-container.headerOffset.globalPaddingBottom
+  .row
+    include ../partials/account-sidebar
+    .col-sm-10
+      ul.list-inline.tab
+        li.active(data-target='baseInfo') 基本信息
+        li(data-target='moreInfo') 更多个人信息
+      hr.nomg
+      form.user(action='')
+        #baseInfo
+          h4.title 基本信息
+          .row
+            .col-sm-8
+              .clearfix
+                label(for='') 昵称
+                span Alexander Wang
+              .clearfix
+                label(for='') 性别
+                span.radio-group
+                  input(type='radio', name='sex-man', checked='')
+                  |  男
+                  input(type='radio', name='sex-woman')
+                  |  女
+              .clearfix
+                label(for='') 生日
+                span
+                  select(name='', id='')
+                    option(value='') 1993
+                    option(value='') 1994
+                    option(value='') 1995
+                    option(value='') 1996
+                  |  年
+                  select(name='', id='')
+                    option(value='') 1
+                    option(value='') 2
+                    option(value='') 3
+                    option(value='') 4
+                  |  月
+                  select(name='', id='')
+                    option(value='') 1
+                    option(value='') 2
+                    option(value='') 3
+                    option(value='') 4
+                  |  日
+              .clearfix
+                label(for='') 真实姓名
+                span
+                  input(placeholder='请输入您的真实姓名', type='text')
+              .clearfix
+                label(for='') 电子邮箱
+                span
+                  input(placeholder='请输入您的电子邮箱Email', type='text')
+              .clearfix
+                label(for='') 所在区域
+                span
+                  select(name='', id='')
+                    option(value='') 北京
+                    option(value='') 上海
+                    option(value='') 山东
+                    option(value='') 江苏
+                  select(name='', id='')
+                    option(value='') 朝阳
+                    option(value='') 东城
+              .clearfix
+                label(for='') 详细地址
+                span
+                  input(placeholder='请输入您的详细地址', type='text')
+            .col-sm-4.text-center
+              img.img-responsive.center-block.mb-20(src='images/u623.png', alt='')
+              button.btn.btn-lg.btn-dark 上传头像
+        #moreInfo(style='display: none')
+          .col-sm-8
+            .clearfix
+              label(for='') 婚姻状况
+              span.radio-group
+                input(type='radio', name='notMarried', checked='')
+                |  未婚 
+                input(type='radio', name='married')
+                |  已婚
+            .clearfix
+              label(for='') 月收入
+              span
+                select(name='', id='')
+                  option(value='') 5000元以下
+                  option(value='') 5000-7999元
+                  option(value='') 8000-9999元
+            .clearfix
+              label(for='') 身份证号码
+              span
+                input(placeholder='请输入正确的身份证号码', type='text')
+            .clearfix
+              label(for='') 教育程度
+              span
+                select(name='', id='')
+                  option(value='') 高中
+                  option(value='') 大专
+                  option(value='') 本科
+                  option(value='') 硕士
+                  option(value='') 博士
+            .clearfix
+              label(for='')
+              span
+                input(placeholder='请输入您所工作的行业', type='text')
+        .clearfix
+          input.btn.btn-lg.btn-dark(type='submit', value='保存')
+  // /.innerPage
+  div(style='clear:both')
+// main-container
